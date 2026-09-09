@@ -1,0 +1,20 @@
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/6.5.1/userguide/gradle_daemon.html.
+Daemon will be stopped at the end of the build stopping after processing
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :jar UP-TO-DATE
+> Task :assemble UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :testplugin
+[INFO] Getting original results (2 tests).
+[INFO] Found 0 tests in round 1 of 1 (0.0 seconds elapsed (0.9 total), 0.0 seconds remaining).
+
+[INFO] Found 0 tests, writing list to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/persistent-state-od-study/cases/controlled/idflakies-minimal/.dtfixingtools/detection-results/list.txt and dt lists to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/persistent-state-od-study/cases/controlled/idflakies-minimal/.dtfixingtools/detection-results/flaky-lists.json
+TRY_COPY_ALL_FAILING_TEST_OUTPUT
+
+BUILD SUCCESSFUL in 6s
+3 actionable tasks: 1 executed, 2 up-to-date

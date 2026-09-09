@@ -1,0 +1,21 @@
+Controlled persistent-filesystem experiment
+
+A = testA_polluter_writesFile
+B = testB_victim_readsFile
+
+Clean-state protocol:
+- Persistent marker was deleted before each order execution.
+- AB passed.
+- BA executed B first with no marker present.
+- B failed with: "Expected persistent marker file to exist".
+
+Reused-state protocol:
+- Persistent marker was deleted only before the first execution.
+- AB passed and left the marker file behind.
+- Before the following BA execution, the marker already existed.
+- BA still executed B before A, but B passed because it observed state
+  created by the previous AB execution.
+
+Conclusion:
+The identical BA order produced different outcomes depending only on
+cross-execution persistent filesystem state.

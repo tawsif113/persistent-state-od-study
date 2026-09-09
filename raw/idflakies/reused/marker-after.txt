@@ -1,0 +1,4 @@
+exists=true
+size=34
+sha256=110da061c735daf486391659b3ce12c18938369f59eca5c10b5f46dd520548f2
+content=written by persistent state-setter

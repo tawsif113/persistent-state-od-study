@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.flakylab.ControlledPersistentStateTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2026-09-08T03:15:07" hostname="HOSE2406102293A" time="0.013">
+  <properties/>
+  <testcase name="testB_victim_readsFile()" classname="com.example.flakylab.ControlledPersistentStateTest" time="0.011">
+    <failure message="org.opentest4j.AssertionFailedError: Expected persistent marker file to exist ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected persistent marker file to exist ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.example.flakylab.ControlledPersistentStateTest.testB_victim_readsFile(ControlledPersistentStateTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+</failure>
+  </testcase>
+  <testcase name="testA_polluter_writesFile()" classname="com.example.flakylab.ControlledPersistentStateTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,22 @@
+iDFlakies version: 1.1.0
+testrunner-gradle-plugin version: 1.2
+Gradle version: 6.5.1
+Java version: JDK 11
+JUnit Jupiter version: 5.13.4
+
+Detector:
+random-class-method
+
+Randomized rounds:
+10
+
+Original-order requirement:
+dt.detector.original_order.all_must_pass=false
+
+Detector command:
+
+./gradlew testplugin \
+  -Dtestplugin.className=edu.illinois.cs.dt.tools.detection.DetectorPlugin \
+  -Ddetector.detector_type=random-class-method \
+  -Ddt.randomize.rounds=10 \
+  -Ddt.detector.original_order.all_must_pass=false

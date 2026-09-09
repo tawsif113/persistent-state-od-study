@@ -1,0 +1,3 @@
+timestamp=1788841117092,pid=603744,event=JVM_START,marker_exists=true
+timestamp=1788841117101,pid=603744,event=A_BEFORE,marker_exists=true
+timestamp=1788841117101,pid=603744,event=A_AFTER,marker_exists=true

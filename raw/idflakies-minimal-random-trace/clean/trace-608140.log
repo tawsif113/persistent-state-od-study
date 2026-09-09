@@ -1,0 +1,7 @@
+timestamp=1788842019569,pid=608140,protocol=clean,event=ORDER_START_PRE_RESET,marker_exists=true
+timestamp=1788842019579,pid=608140,protocol=clean,event=ORDER_START_POST_RESET,marker_exists=false
+timestamp=1788842019585,pid=608140,protocol=clean,event=B_BEFORE,marker_exists=false
+timestamp=1788842019595,pid=608140,protocol=clean,event=ORDER_END,marker_exists=false
+timestamp=1788842019601,pid=608140,protocol=clean,event=A_BEFORE,marker_exists=false
+timestamp=1788842019602,pid=608140,protocol=clean,event=A_AFTER,marker_exists=true
+timestamp=1788842019602,pid=608140,protocol=clean,event=ORDER_END,marker_exists=true

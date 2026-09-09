@@ -1,0 +1,7 @@
+timestamp=2026-09-08T09:15:07+06:00
+path=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/idflakies-lab/notes/controlled-persistent-marker.txt
+exists=true
+size=30
+mtime=2026-09-08 09:15:07.147914932 +0600
+sha256=08e704a6e18ab38937d187c343950d73d893a739205ac0e55a470b1017d1abc4
+content=written by persistent polluter

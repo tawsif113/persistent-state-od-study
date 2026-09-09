@@ -1,0 +1,2 @@
+com.example.flakylab.IDFlakiesPersistentStateTest.testA_stateSetter_writesFile
+com.example.flakylab.IDFlakiesPersistentStateTest.testB_brittle_readsFile

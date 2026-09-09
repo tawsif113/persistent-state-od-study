@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.flakylab.ControlledPersistentStateTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-08T03:15:13" hostname="HOSE2406102293A" time="0.011">
+  <properties/>
+  <testcase name="testB_victim_readsFile()" classname="com.example.flakylab.ControlledPersistentStateTest" time="0.009"/>
+  <testcase name="testA_polluter_writesFile()" classname="com.example.flakylab.ControlledPersistentStateTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

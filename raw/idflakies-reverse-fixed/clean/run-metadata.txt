@@ -1,0 +1,11 @@
+timestamp=2026-09-08T14:30:39+06:00
+protocol=clean
+
+PRESET ORIGINAL ORDER:
+com.example.flakylab.PersistentStateODTest#testA_stateSetter_writesFile()
+com.example.flakylab.PersistentStateODTest#testB_brittle_readsFile()
+
+ORDER SHA256:
+654d090e7b24c8396330519c490d2aec4ec11be485314982f3633abf88a76f9f  /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/persistent-state-od-study/cases/controlled/idflakies-minimal/.dtfixingtools/original-order
+
+marker_exists_initial=false

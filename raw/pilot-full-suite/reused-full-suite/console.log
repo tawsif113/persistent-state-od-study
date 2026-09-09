@@ -1,0 +1,56 @@
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/6.5.1/userguide/gradle_daemon.html.
+Daemon will be stopped at the end of the build stopping after processing
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :jar UP-TO-DATE
+> Task :assemble UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :testplugin
+[INFO] Getting original results (18 tests).
+Verified com.example.flakylab.LocaleODTest#testB_victim_requiresChangedLocale(), status: expected PASS, got PASS
+Verified com.example.flakylab.LocaleODTest#testB_victim_requiresChangedLocale(), status: expected ERROR, got ERROR
+[INFO] Found 1 tests in round 1 of 10 (0.0 seconds elapsed (1.4 total), 0.0 seconds remaining).
+Verified com.example.flakylab.SystemPropertyODTest#testB_victim_requiresProperty(), status: expected PASS, got PASS
+Verified com.example.flakylab.SystemPropertyODTest#testB_victim_requiresProperty(), status: expected ERROR, got ERROR
+[INFO] Found 1 tests in round 1 of 10 (0.0 seconds elapsed (2.9 total), 0.0 seconds remaining).
+Verified com.example.flakylab.StaticStateODTest#testB_victim_requiresInitializedState(), status: expected PASS, got PASS
+Verified com.example.flakylab.StaticStateODTest#testB_victim_requiresInitializedState(), status: expected ERROR, got ERROR
+[INFO] Found 1 tests in round 1 of 10 (0.0 seconds elapsed (4.3 total), 0.0 seconds remaining).
+Verified com.example.flakylab.TimeZoneODTest#testB_victim_requiresChangedTimeZone(), status: expected PASS, got PASS
+Verified com.example.flakylab.TimeZoneODTest#testB_victim_requiresChangedTimeZone(), status: expected ERROR, got ERROR
+[INFO] Found 1 tests in round 1 of 10 (0.0 seconds elapsed (5.8 total), 0.0 seconds remaining).
+Verified com.example.flakylab.FileStateODTest#testB_victim_requiresFile(), status: expected PASS, got PASS
+Verified com.example.flakylab.FileStateODTest#testB_victim_requiresFile(), status: expected ERROR, got ERROR
+[INFO] Found 1 tests in round 1 of 10 (0.0 seconds elapsed (7.5 total), 0.0 seconds remaining).
+[INFO] Found 0 tests in round 1 of 10 (0.0 seconds elapsed (8.1 total), 0.0 seconds remaining).
+[INFO] Found 0 tests in round 2 of 10 (0.6 seconds elapsed (8.6 total), 2.2 seconds remaining).
+Verified com.example.flakylab.StaticStateODTest#testB_victim_requiresInitializedState(), status: expected PASS, got PASS
+Verified com.example.flakylab.StaticStateODTest#testB_victim_requiresInitializedState(), status: expected ERROR, got ERROR
+[INFO] Found 0 tests in round 3 of 10 (1.1 seconds elapsed (10.1 total), 2.6 seconds remaining).
+[INFO] Found 0 tests in round 4 of 10 (2.6 seconds elapsed (10.7 total), 3.9 seconds remaining).
+Verified com.example.flakylab.SystemPropertyODTest#testB_victim_requiresProperty(), status: expected PASS, got PASS
+Verified com.example.flakylab.SystemPropertyODTest#testB_victim_requiresProperty(), status: expected ERROR, got ERROR
+[INFO] Found 0 tests in round 5 of 10 (3.1 seconds elapsed (12.2 total), 3.1 seconds remaining).
+Verified com.example.flakylab.TimeZoneODTest#testB_victim_requiresChangedTimeZone(), status: expected PASS, got PASS
+Verified com.example.flakylab.TimeZoneODTest#testB_victim_requiresChangedTimeZone(), status: expected ERROR, got ERROR
+[INFO] Found 0 tests in round 6 of 10 (4.6 seconds elapsed (13.6 total), 3.1 seconds remaining).
+Verified com.example.flakylab.TimeZoneODTest#testB_victim_requiresChangedTimeZone(), status: expected PASS, got PASS
+Verified com.example.flakylab.TimeZoneODTest#testB_victim_requiresChangedTimeZone(), status: expected ERROR, got ERROR
+[INFO] Found 0 tests in round 7 of 10 (6.1 seconds elapsed (15.1 total), 2.6 seconds remaining).
+[INFO] Found 0 tests in round 8 of 10 (7.6 seconds elapsed (15.6 total), 1.9 seconds remaining).
+[INFO] Found 0 tests in round 9 of 10 (8.1 seconds elapsed (16.2 total), 0.9 seconds remaining).
+Verified com.example.flakylab.StaticStateODTest#testB_victim_requiresInitializedState(), status: expected PASS, got PASS
+Verified com.example.flakylab.StaticStateODTest#testB_victim_requiresInitializedState(), status: expected ERROR, got ERROR
+Verified com.example.flakylab.SystemPropertyODTest#testB_victim_requiresProperty(), status: expected PASS, got PASS
+Verified com.example.flakylab.SystemPropertyODTest#testB_victim_requiresProperty(), status: expected ERROR, got ERROR
+[INFO] Found 0 tests in round 10 of 10 (8.6 seconds elapsed (18.6 total), 0.0 seconds remaining).
+
+[INFO] Found 5 tests, writing list to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/idflakies-lab/.dtfixingtools/detection-results/list.txt and dt lists to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/idflakies-lab/.dtfixingtools/detection-results/flaky-lists.json
+TRY_COPY_ALL_FAILING_TEST_OUTPUT
+
+BUILD SUCCESSFUL in 22s
+3 actionable tasks: 1 executed, 2 up-to-date

@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'edu.illinois.cs:idflakies:1.1.0'
+        classpath 'edu.illinois.cs:testrunner-gradle-plugin:1.2'
+        classpath 'com.google.code.gson:gson:2.13.2'
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+apply plugin: 'testrunner'
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.13.4'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

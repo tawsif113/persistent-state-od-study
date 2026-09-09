@@ -1,0 +1,6 @@
+timestamp=1788841126774,pid=604515,event=JVM_START,marker_exists=true
+timestamp=1788841126784,pid=604515,event=B_BEFORE,marker_exists=true
+timestamp=1788841126784,pid=604515,event=B_SEES_MARKER,marker_exists=true
+timestamp=1788841126785,pid=604515,event=B_AFTER,marker_exists=true
+timestamp=1788841126842,pid=604515,event=A_BEFORE,marker_exists=true
+timestamp=1788841126842,pid=604515,event=A_AFTER,marker_exists=true

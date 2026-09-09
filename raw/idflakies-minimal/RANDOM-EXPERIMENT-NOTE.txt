@@ -1,0 +1,12 @@
+Exploratory random-class-method experiment.
+
+Observed:
+- Clean protocol detected PersistentStateODTest#testB_brittle_readsFile().
+- Reused protocol did not detect the brittle test.
+- Matched B->A rounds showed clean ERROR versus reused PASS.
+
+Limitation:
+The complete randomized order sequences were not identical between
+protocols because detector behavior diverged after observing different
+outcomes. Therefore this experiment is retained as supporting evidence,
+not as the final same-orders detector comparison.

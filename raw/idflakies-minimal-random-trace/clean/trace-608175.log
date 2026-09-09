@@ -1,0 +1,8 @@
+timestamp=1788842020034,pid=608175,protocol=clean,event=ORDER_START_PRE_RESET,marker_exists=true
+timestamp=1788842020044,pid=608175,protocol=clean,event=ORDER_START_POST_RESET,marker_exists=false
+timestamp=1788842020050,pid=608175,protocol=clean,event=A_BEFORE,marker_exists=false
+timestamp=1788842020050,pid=608175,protocol=clean,event=A_AFTER,marker_exists=true
+timestamp=1788842020056,pid=608175,protocol=clean,event=ORDER_END,marker_exists=true
+timestamp=1788842020063,pid=608175,protocol=clean,event=B_BEFORE,marker_exists=true
+timestamp=1788842020064,pid=608175,protocol=clean,event=B_AFTER,marker_exists=true
+timestamp=1788842020064,pid=608175,protocol=clean,event=ORDER_END,marker_exists=true

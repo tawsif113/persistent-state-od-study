@@ -1,0 +1,24 @@
+# Gradle generated files
+**/.gradle/
+**/build/
+
+# Temporary iDFlakies working directory inside subject projects
+**/.dtfixingtools/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS/editor files
+.DS_Store
+*~
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# Experimental persistent-state marker files
+cases/controlled/idflakies-minimal/state/*
+!cases/controlled/idflakies-minimal/state/.gitkeep

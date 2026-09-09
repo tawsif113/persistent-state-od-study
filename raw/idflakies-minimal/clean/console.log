@@ -1,0 +1,32 @@
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/6.5.1/userguide/gradle_daemon.html.
+Daemon will be stopped at the end of the build stopping after processing
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :jar
+> Task :assemble
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :testplugin
+[INFO] Getting original results (2 tests).
+Verified com.example.flakylab.PersistentStateODTest#testB_brittle_readsFile(), status: expected PASS, got PASS
+Verified com.example.flakylab.PersistentStateODTest#testB_brittle_readsFile(), status: expected ERROR, got ERROR
+[INFO] Found 1 tests in round 1 of 10 (0.0 seconds elapsed (1.4 total), 0.0 seconds remaining).
+[INFO] Found 0 tests in round 1 of 10 (0.0 seconds elapsed (1.9 total), 0.0 seconds remaining).
+[INFO] Found 0 tests in round 2 of 10 (0.5 seconds elapsed (2.3 total), 2.0 seconds remaining).
+[INFO] Found 0 tests in round 3 of 10 (0.9 seconds elapsed (2.8 total), 2.2 seconds remaining).
+[INFO] Found 0 tests in round 4 of 10 (1.4 seconds elapsed (3.2 total), 2.1 seconds remaining).
+[INFO] Found 0 tests in round 5 of 10 (1.8 seconds elapsed (3.6 total), 1.8 seconds remaining).
+[INFO] Found 0 tests in round 6 of 10 (2.3 seconds elapsed (4.1 total), 1.5 seconds remaining).
+[INFO] Found 0 tests in round 7 of 10 (2.7 seconds elapsed (4.5 total), 1.2 seconds remaining).
+[INFO] Found 0 tests in round 8 of 10 (3.2 seconds elapsed (5.0 total), 0.8 seconds remaining).
+[INFO] Found 0 tests in round 9 of 10 (3.6 seconds elapsed (5.4 total), 0.4 seconds remaining).
+[INFO] Found 0 tests in round 10 of 10 (4.1 seconds elapsed (5.9 total), 0.0 seconds remaining).
+
+[INFO] Found 1 tests, writing list to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/persistent-state-od-study/cases/controlled/idflakies-minimal/.dtfixingtools/detection-results/list.txt and dt lists to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/persistent-state-od-study/cases/controlled/idflakies-minimal/.dtfixingtools/detection-results/flaky-lists.json
+TRY_COPY_ALL_FAILING_TEST_OUTPUT
+
+BUILD SUCCESSFUL in 8s
+3 actionable tasks: 2 executed, 1 up-to-date

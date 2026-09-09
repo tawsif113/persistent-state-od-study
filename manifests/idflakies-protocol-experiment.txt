@@ -1,0 +1,14 @@
+Research question:
+How does cross-execution persistent state affect detection of order-dependent tests?
+
+JDK=11
+Gradle=6.5.1
+iDFlakies=1.1.0
+testrunner-gradle-plugin=1.2
+detector=random-class-method
+rounds=10
+seed=42
+original_order_all_must_pass=false
+
+Test order file SHA256:
+8c5093b8c1b239aa933f85ea9fc59a3b0727a801409e78b76bdf30b2974a1522  orders/idflakies-persistent-pair.txt

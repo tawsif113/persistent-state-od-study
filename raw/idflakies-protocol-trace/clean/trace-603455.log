@@ -1,0 +1,8 @@
+timestamp=1788841113164,pid=603455,protocol=clean,event=ORDER_START_PRE_RESET,marker_exists=true,marker_size=34,marker_content=written by persistent state-setter
+timestamp=1788841113177,pid=603455,protocol=clean,event=ORDER_START_POST_RESET,marker_exists=false,marker_size=-1,marker_content=<absent>
+timestamp=1788841113178,pid=603455,protocol=clean,event=A_BEFORE,marker_exists=false,marker_size=-1,marker_content=<absent>
+timestamp=1788841113178,pid=603455,protocol=clean,event=A_AFTER,marker_exists=true,marker_size=34,marker_content=written by persistent state-setter
+timestamp=1788841113179,pid=603455,protocol=clean,event=ORDER_END,marker_exists=true,marker_size=34,marker_content=written by persistent state-setter
+timestamp=1788841113182,pid=603455,protocol=clean,event=B_BEFORE,marker_exists=true,marker_size=34,marker_content=written by persistent state-setter
+timestamp=1788841113183,pid=603455,protocol=clean,event=B_AFTER,marker_exists=true,marker_size=34,marker_content=written by persistent state-setter
+timestamp=1788841113183,pid=603455,protocol=clean,event=ORDER_END,marker_exists=true,marker_size=34,marker_content=written by persistent state-setter

@@ -1,0 +1,6 @@
+timestamp=2026-09-08T10:33:36+06:00
+protocol=clean
+marker_exists_before=false
+marker_exists_after=true
+marker_sha256=110da061c735daf486391659b3ce12c18938369f59eca5c10b5f46dd520548f2
+marker_content=written by persistent state-setter

@@ -1,0 +1,5 @@
+case_id,protocol,order_id,order,state_before,victim_result,process_exit
+persistent-file,clean,01,AB,absent,PASS,0
+persistent-file,clean,02,BA,absent,FAIL,1
+persistent-file,reused,01,AB,absent,PASS,0
+persistent-file,reused,02,BA,present,PASS,0

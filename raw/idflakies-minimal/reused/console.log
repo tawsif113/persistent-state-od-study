@@ -1,0 +1,29 @@
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/6.5.1/userguide/gradle_daemon.html.
+Daemon will be stopped at the end of the build stopping after processing
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :jar UP-TO-DATE
+> Task :assemble UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :testplugin
+[INFO] Getting original results (2 tests).
+[INFO] Found 0 tests in round 1 of 10 (0.0 seconds elapsed (0.4 total), 0.0 seconds remaining).
+[INFO] Found 0 tests in round 2 of 10 (0.4 seconds elapsed (0.9 total), 1.8 seconds remaining).
+[INFO] Found 0 tests in round 3 of 10 (0.9 seconds elapsed (1.3 total), 2.1 seconds remaining).
+[INFO] Found 0 tests in round 4 of 10 (1.3 seconds elapsed (1.8 total), 2.0 seconds remaining).
+[INFO] Found 0 tests in round 5 of 10 (1.8 seconds elapsed (2.2 total), 1.8 seconds remaining).
+[INFO] Found 0 tests in round 6 of 10 (2.2 seconds elapsed (2.6 total), 1.5 seconds remaining).
+[INFO] Found 0 tests in round 7 of 10 (2.6 seconds elapsed (3.1 total), 1.1 seconds remaining).
+[INFO] Found 0 tests in round 8 of 10 (3.1 seconds elapsed (3.5 total), 0.8 seconds remaining).
+[INFO] Found 0 tests in round 9 of 10 (3.5 seconds elapsed (4.0 total), 0.4 seconds remaining).
+[INFO] Found 0 tests in round 10 of 10 (4.0 seconds elapsed (4.4 total), 0.0 seconds remaining).
+
+[INFO] Found 0 tests, writing list to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/persistent-state-od-study/cases/controlled/idflakies-minimal/.dtfixingtools/detection-results/list.txt and dt lists to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/persistent-state-od-study/cases/controlled/idflakies-minimal/.dtfixingtools/detection-results/flaky-lists.json
+TRY_COPY_ALL_FAILING_TEST_OUTPUT
+
+BUILD SUCCESSFUL in 7s
+3 actionable tasks: 1 executed, 2 up-to-date

@@ -1,0 +1,5 @@
+timestamp=1788841141455,pid=605687,protocol=reused,event=ORDER_START_PRE_RESET,marker_exists=true,marker_size=34,marker_content=written by persistent state-setter
+timestamp=1788841141469,pid=605687,protocol=reused,event=ORDER_START_POST_RESET,marker_exists=true,marker_size=34,marker_content=written by persistent state-setter
+timestamp=1788841141470,pid=605687,protocol=reused,event=B_BEFORE,marker_exists=true,marker_size=34,marker_content=written by persistent state-setter
+timestamp=1788841141470,pid=605687,protocol=reused,event=B_AFTER,marker_exists=true,marker_size=34,marker_content=written by persistent state-setter
+timestamp=1788841141472,pid=605687,protocol=reused,event=ORDER_END,marker_exists=true,marker_size=34,marker_content=written by persistent state-setter

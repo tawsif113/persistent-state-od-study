@@ -1,0 +1,33 @@
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :jar UP-TO-DATE
+> Task :assemble UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :testplugin
+[INFO] Getting original results (16 tests).
+Verified com.example.flakylab.StaticStateODTest#testB_victim_requiresInitializedState(), status: expected PASS, got PASS
+Verified com.example.flakylab.StaticStateODTest#testB_victim_requiresInitializedState(), status: expected ERROR, got ERROR
+Verified com.example.flakylab.SystemPropertyODTest#testB_victim_requiresProperty(), status: expected ERROR, got ERROR
+Verified com.example.flakylab.SystemPropertyODTest#testB_victim_requiresProperty(), status: expected PASS, got PASS
+Verified com.example.flakylab.FileStateODTest#testB_victim_requiresFile(), status: expected PASS, got PASS
+Verified com.example.flakylab.FileStateODTest#testB_victim_requiresFile(), status: expected ERROR, got ERROR
+[INFO] Found 3 tests in round 1 of 2 (0.0 seconds elapsed (3.2 total), 0.0 seconds remaining).
+Verified com.example.flakylab.TimeZoneODTest#testB_victim_requiresChangedTimeZone(), status: expected PASS, got PASS
+Verified com.example.flakylab.TimeZoneODTest#testB_victim_requiresChangedTimeZone(), status: expected ERROR, got ERROR
+Verified com.example.flakylab.LocaleODTest#testB_victim_requiresChangedLocale(), status: expected PASS, got PASS
+Verified com.example.flakylab.LocaleODTest#testB_victim_requiresChangedLocale(), status: expected ERROR, got ERROR
+[INFO] Found 2 tests in round 1 of 2 (0.0 seconds elapsed (5.5 total), 0.0 seconds remaining).
+[INFO] Found 0 tests in round 1 of 2 (0.0 seconds elapsed (6.0 total), 0.0 seconds remaining).
+Verified com.example.flakylab.LocaleODTest#testB_victim_requiresChangedLocale(), status: expected PASS, got PASS
+Verified com.example.flakylab.LocaleODTest#testB_victim_requiresChangedLocale(), status: expected ERROR, got ERROR
+[INFO] Found 0 tests in round 2 of 2 (0.5 seconds elapsed (7.3 total), 0.0 seconds remaining).
+
+[INFO] Found 5 tests, writing list to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/idflakies-lab/.dtfixingtools/detection-results/list.txt and dt lists to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/idflakies-lab/.dtfixingtools/detection-results/flaky-lists.json
+TRY_COPY_ALL_FAILING_TEST_OUTPUT
+
+BUILD SUCCESSFUL in 9s
+3 actionable tasks: 1 executed, 2 up-to-date
