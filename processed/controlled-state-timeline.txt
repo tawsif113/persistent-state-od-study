@@ -1,0 +1,58 @@
+
+========================================================================
+CLEAN
+========================================================================
+1788856244537  pid=631057   ORDER_START_PRE_RESET        marker=false
+1788856244564  pid=631057   ORDER_START_POST_RESET       marker=false
+1788856244578  pid=631057   A_BEFORE                     marker=false
+1788856244579  pid=631057   A_AFTER                      marker=true
+1788856244592  pid=631057   ORDER_END                    marker=true
+1788856244610  pid=631057   B_BEFORE                     marker=true
+1788856244613  pid=631057   B_AFTER                      marker=true
+1788856244614  pid=631057   ORDER_END                    marker=true
+1788856245467  pid=631094   ORDER_START_PRE_RESET        marker=true
+1788856245489  pid=631094   ORDER_START_POST_RESET       marker=false
+1788856245500  pid=631094   B_BEFORE                     marker=false
+1788856245520  pid=631094   ORDER_END                    marker=false
+1788856245535  pid=631094   A_BEFORE                     marker=false
+1788856245535  pid=631094   A_AFTER                      marker=true
+1788856245537  pid=631094   ORDER_END                    marker=true
+1788856246343  pid=631133   ORDER_START_PRE_RESET        marker=true
+1788856246367  pid=631133   ORDER_START_POST_RESET       marker=false
+1788856246379  pid=631133   A_BEFORE                     marker=false
+1788856246379  pid=631133   A_AFTER                      marker=true
+1788856246392  pid=631133   ORDER_END                    marker=true
+1788856246406  pid=631133   B_BEFORE                     marker=true
+1788856246408  pid=631133   B_AFTER                      marker=true
+1788856246409  pid=631133   ORDER_END                    marker=true
+1788856247207  pid=631171   ORDER_START_PRE_RESET        marker=true
+1788856247230  pid=631171   ORDER_START_POST_RESET       marker=false
+1788856247241  pid=631171   B_BEFORE                     marker=false
+1788856247261  pid=631171   ORDER_END                    marker=false
+1788856248042  pid=631210   ORDER_START_PRE_RESET        marker=false
+1788856248065  pid=631210   ORDER_START_POST_RESET       marker=false
+1788856248076  pid=631210   B_BEFORE                     marker=false
+1788856248097  pid=631210   ORDER_END                    marker=false
+1788856248114  pid=631210   A_BEFORE                     marker=false
+1788856248114  pid=631210   A_AFTER                      marker=true
+1788856248115  pid=631210   ORDER_END                    marker=true
+
+========================================================================
+REUSED
+========================================================================
+1788856254064  pid=631521   ORDER_START_PRE_RESET        marker=false
+1788856254085  pid=631521   ORDER_START_POST_RESET       marker=false
+1788856254097  pid=631521   A_BEFORE                     marker=false
+1788856254097  pid=631521   A_AFTER                      marker=true
+1788856254109  pid=631521   ORDER_END                    marker=true
+1788856254122  pid=631521   B_BEFORE                     marker=true
+1788856254124  pid=631521   B_AFTER                      marker=true
+1788856254125  pid=631521   ORDER_END                    marker=true
+1788856255014  pid=631559   ORDER_START_PRE_RESET        marker=true
+1788856255038  pid=631559   ORDER_START_POST_RESET       marker=true
+1788856255051  pid=631559   B_BEFORE                     marker=true
+1788856255055  pid=631559   B_AFTER                      marker=true
+1788856255065  pid=631559   ORDER_END                    marker=true
+1788856255078  pid=631559   A_BEFORE                     marker=true
+1788856255078  pid=631559   A_AFTER                      marker=true
+1788856255079  pid=631559   ORDER_END                    marker=true

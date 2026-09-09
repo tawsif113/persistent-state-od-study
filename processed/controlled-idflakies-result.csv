@@ -1,0 +1,3 @@
+case_id,protocol,original_order,reverse_order,state_before_reverse,state_after_reset,brittle_result,idflakies_detected
+persistent-filesystem-bss,clean,A->B,B->A,present,absent,ERROR,true
+persistent-filesystem-bss,reused,A->B,B->A,present,present,PASS,false

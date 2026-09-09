@@ -1,0 +1,29 @@
+Controlled persistent-filesystem BSS experiment.
+
+A = testA_stateSetter_writesFile
+B = testB_brittle_readsFile
+
+Both protocols used the same fixed original order:
+A -> B
+
+Both protocols therefore used the same reverse order:
+B -> A
+
+Clean-state protocol:
+- A -> B left the persistent marker present.
+- The next JVM began with the marker present.
+- The clean protocol removed the marker before executing B -> A.
+- B executed with marker absent and returned ERROR.
+- iDFlakies detected B as order dependent.
+
+Reused-state protocol:
+- A -> B left the persistent marker present.
+- The next JVM began with the marker present.
+- The reused protocol preserved the marker.
+- B executed before A but still observed the marker from the previous execution.
+- B returned PASS.
+- iDFlakies did not detect B as order dependent.
+
+Conclusion:
+Under identical test orders, cross-execution persistent filesystem state
+masked the brittle/state-setter dependency from iDFlakies.
