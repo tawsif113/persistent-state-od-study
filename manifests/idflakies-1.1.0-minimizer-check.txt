@@ -1,0 +1,34 @@
+iDFlakies 1.1.0 minimizer capability check
+
+Artifact:
+~/.gradle/caches/modules-2/files-2.1/edu.illinois.cs/idflakies/1.1.0/d6689d72aa9a7993c2d968d3a58a2b6e86678412/idflakies-1.1.0.jar
+
+Observed plugin classes:
+- edu.illinois.cs.dt.tools.detection.DetectorPlugin
+- edu.illinois.cs.dt.tools.utility.BulkOrderRunnerPlugin
+- edu.illinois.cs.dt.tools.utility.ModuleTestTimePlugin
+- edu.illinois.cs.dt.tools.utility.ReplayPlugin
+
+Searches for:
+- minimizer
+- minimize
+- polluter
+- cleaner
+- fixflakies
+- MinimizerPlugin
+
+returned no minimizer-related classes.
+
+Conclusion:
+The pinned iDFlakies 1.1.0 Gradle artifact used for the controlled
+detection experiment does not expose the iFixFlakies minimizer.
+
+The controlled BSS state-setter ground truth is therefore established
+manually from the test semantics and matched-order execution evidence,
+without changing the detector toolchain.
+
+Controlled ground truth:
+- brittle test: testB_brittle_readsFile
+- state-setter: testA_stateSetter_writesFile
+- persistent state: filesystem marker
+9c2056143ea8961ba39d3ca147fa076e0a8dcb388e449cfec0cc0f6918ce192b  /home/kazi/.gradle/caches/modules-2/files-2.1/edu.illinois.cs/idflakies/1.1.0/d6689d72aa9a7993c2d968d3a58a2b6e86678412/idflakies-1.1.0.jar
