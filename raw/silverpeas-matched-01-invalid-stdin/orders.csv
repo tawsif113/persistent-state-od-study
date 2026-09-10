@@ -1,0 +1,5 @@
+order_id,position,label,method
+01,1,A,testInstallJustSilverpeas
+01,2,B,testInstall
+02,1,B,testInstall
+02,2,A,testInstallJustSilverpeas

@@ -1,0 +1,41 @@
+INVALID MATCHED-ORDER RUN
+=========================
+
+This execution must NOT be used as the formal Silverpeas matched clean-vs-reused
+result.
+
+Intended orders:
+01: A -> B
+02: B -> A
+
+Actually executed under each protocol:
+01 position 1: A
+02 position 1: B
+
+Missing executions:
+01 position 2: B
+02 position 2: A
+
+Observed pilot behavior:
+Clean protocol:
+- order 01 started with deployments/ absent
+- A passed
+- order 02 reset deployments/ to absent
+- B failed
+
+Reused protocol:
+- order 01 started with deployments/ absent
+- A passed and created deployments/
+- order 02 started with deployments/ present
+- B passed
+
+Therefore this run provides supporting evidence for cross-execution persistent
+filesystem state, but it does not satisfy the matched full-order requirement.
+
+Likely harness defect:
+The test-running Gradle process inherited stdin from the while loop's process
+substitution and consumed subsequent order rows. The harness must be fixed so
+Gradle receives stdin from /dev/null before the experiment is rerun.
+
+No scientific conclusions about the formal matched-order experiment should be
+drawn from this run.

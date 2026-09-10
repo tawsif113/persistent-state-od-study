@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.silverpeas.setup.installation.SilverpeasInstallationTaskTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-10T20:55:42" hostname="HOSE2406102293A" time="1.291">
+  <properties/>
+  <testcase name="testInstall" classname="org.silverpeas.setup.installation.SilverpeasInstallationTaskTest" time="1.291"/>
+  <system-out><![CDATA[
+ 02:55:43.875198 [install] (Re)Installation of jackrabbit-jca.rar
+ 02:55:43.879501 [install] (Re)Installation of jackrabbit-jca.rar: [OK]
+ 02:55:43.880043 [install] (Re)Installation of silverpeas.war
+ 02:55:43.880507 [install] (Re)Installation of silverpeas.war: [OK]]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
