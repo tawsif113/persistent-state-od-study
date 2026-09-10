@@ -1,0 +1,149 @@
+Fastjson RankF multi-state-setter analysis
+===========================================
+
+Purpose
+-------
+Investigate whether the two large RankF BSS outliers for Fastjson can be
+explained by each brittle test having multiple valid state-setters, and whether
+the reported rank appears to correspond to a single arbitrary setter or the
+best-ranked valid setter.
+
+RankF / Fastjson artifact
+-------------------------
+Project:
+https://github.com/alibaba/fastjson.git
+
+Fastjson SHA recorded in RankF data:
+5c6d6fd471ea1fab59f0df2dd31e0b936806780d
+
+Brittle tests:
+1. com.alibaba.json.bvt.parser.DefaultExtJSONParser_parseArray.test_7
+2. com.alibaba.json.bvt.parser.DefaultExtJSONParser_parseArray.test_8
+
+Ground-truth state-setters
+--------------------------
+RankF's BSS data.csv contains:
+
+test_7:
+  165 rows
+  165 unique recorded state-setters
+
+test_8:
+  163 rows
+  163 unique recorded state-setters
+
+All recorded state-setters for both brittles are present in their respective
+RankF candidate-ranking output CSVs.
+
+RankF outcome-generation semantics
+----------------------------------
+The BSS implementation stores all state-setters for each brittle in a set and
+getPassOrFail() iterates over that set. An execution is modeled as PASS when
+any recorded state-setter occurs before the brittle test.
+
+Therefore RankF's BSS outcome-generation model recognizes multiple alternative
+state-setters for these Fastjson brittles.
+
+Ranking-output analysis
+-----------------------
+Candidate count for each Fastjson brittle:
+  4780
+
+For both output files:
+  score_for_not_polluter(class0) is zero for every candidate.
+
+Therefore ordering by:
+  score_for_polluter(class1)
+
+and ordering by:
+  score_for_polluter(class1) - score_for_not_polluter(class0)
+
+produce the same ranking for these cases.
+
+test_7:
+  recorded valid state-setters: 165
+  valid setters present in output: 165
+  missing valid setters: 0
+  best valid-setter rank: 119
+  worst valid-setter rank: 4691
+  valid setters in Top 1: 0
+  valid setters in Top 3: 0
+  valid setters in Top 5: 0
+  valid setters in Top 10: 0
+  valid setters in Top 100: 0
+
+  best-ranked recorded state-setter:
+  com.alibaba.json.bvt.issue_1900.Issue1955.test_for_issue
+
+  score:
+  0.010239076361646376
+
+test_8:
+  recorded valid state-setters: 163
+  valid setters present in output: 163
+  missing valid setters: 0
+  best valid-setter rank: 109
+  worst valid-setter rank: 4684
+  valid setters in Top 1: 0
+  valid setters in Top 3: 0
+  valid setters in Top 5: 0
+  valid setters in Top 10: 0
+  valid setters in Top 100: 0
+
+  best-ranked recorded state-setter:
+  com.alibaba.json.bvt.issue_1900.Issue1955.test_for_issue
+
+  score:
+  0.010270876626830464
+
+Interpretation
+--------------
+The Fastjson RankF outliers cannot be explained merely by evaluating one
+poorly ranked state-setter while other valid alternatives rank highly.
+
+When the candidate output is joined against every state-setter recorded in
+RankF's BSS ground truth, the best valid state-setter is rank 119 for test_7
+and rank 109 for test_8. These reproduce the previously observed outlier ranks.
+
+Thus, for these two artifact cases, none of the 165/163 recorded valid
+state-setters appears in the Top 100.
+
+This analysis does NOT establish from a separate downstream evaluation script
+that RankF explicitly computes min(rank) over all valid state-setters. Such a
+downstream evaluator was not located in the inspected artifact. Instead, the
+best rank was independently recomputed over all recorded valid setters and
+happens to reproduce the observed 119 and 109 values exactly.
+
+Possible mechanism to investigate
+---------------------------------
+Because any one of many alternative state-setters can make the synthesized
+BSS execution pass, unrelated tests that co-occur before the brittle in PASS
+orders may also accumulate positive RankF evidence. With 163-165 alternative
+setters, evidence may be distributed across many true setters while some
+non-setters accumulate stronger scores.
+
+This is currently a plausible explanation, not a manually validated causal
+result.
+
+Artifact SHA256 provenance
+--------------------------
+3fbed0d579656dac6664b5eecfe815a480258dead8960bdcc7f91d324ac29513
+  Preprocess/Ranking - ALL - MD/BSS/data.csv
+
+cb7d6c0c45c87ba4e16f51d68f507d58996adcf1d121be4aac4e56bf2bdba43a
+  Results/2/Ranking - Methods/BSS/getCombinations.py
+
+367f399e75882d0df983cdf8420296859b02b6952b9e96c0f61e3a31af74e113
+  Results/2/Ranking - Methods/BSS/output/alibaba#fastjson/
+  Ranking_isBSSPair_._DefaultExtJSONParser_parseArray.test_7_OrderId_0.csv
+
+a2e4ed12efa5b490a00e1726aeda264488ce7417c3be2c934ed6d64477dcc887
+  Results/2/Ranking - Methods/BSS/output/alibaba#fastjson/
+  Ranking_isBSSPair_._DefaultExtJSONParser_parseArray.test_8_OrderId_0.csv
+
+Terminology note
+----------------
+"Valid state-setter" in this note means a state-setter recorded as positive
+BSS ground truth in RankF's artifact. The 165/163 pairs have not been
+individually manually revalidated in the Fastjson repository during this
+analysis.
