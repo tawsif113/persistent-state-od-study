@@ -80,7 +80,7 @@ run_test() {
         echo "test=$TEST_CLASS.$method"
         echo "silverpeas_sha=$ACTUAL_SHA"
         echo "java_home=$JAVA_HOME"
-        echo "command=./gradlew --no-daemon cleanTest test -x processTestResources --tests '$TEST_CLASS.$method'"
+        echo "command=./gradlew --no-daemon cleanTest test -x processTestResources --tests '$TEST_CLASS.$method' < /dev/null"
     } > "${base}.metadata.txt"
 
     (
@@ -88,7 +88,7 @@ run_test() {
         ./gradlew --no-daemon \
             cleanTest test \
             -x processTestResources \
-            --tests "$TEST_CLASS.$method"
+            --tests "$TEST_CLASS.$method" < /dev/null
     ) 2>&1 | tee "${base}.log"
 
     local rc=${PIPESTATUS[0]}
@@ -135,6 +135,36 @@ run_protocol() {
 
         snapshot_state "$OUT/$protocol/order-${order_id}-end-state.txt"
     done
+
+    local expected_executions
+    local actual_executions
+
+    expected_executions="$(
+        awk -F, 'NR > 1 && NF >= 4 {count++} END {print count+0}' "$ORDER_FILE"
+    )"
+
+    actual_executions="$(
+        find "$OUT/$protocol" -maxdepth 1 -type f \
+            -name 'order-*-pos-*-*.exit-code.txt' \
+            | awk 'END {print NR+0}'
+    )"
+
+    {
+        echo "expected_executions=$expected_executions"
+        echo "actual_executions=$actual_executions"
+    } > "$OUT/$protocol/execution-count.txt"
+
+    [[ "$actual_executions" -eq "$expected_executions" ]] \
+        || fail "$protocol executed $actual_executions tests; expected $expected_executions"
+
+    while IFS=, read -r expected_order expected_position expected_label expected_method; do
+        [[ -n "$expected_order" ]] || continue
+
+        expected_file="$OUT/$protocol/order-${expected_order}-pos-${expected_position}-${expected_label}.exit-code.txt"
+
+        [[ -f "$expected_file" ]] \
+            || fail "$protocol missing expected execution evidence: $expected_file"
+    done < <(tail -n +2 "$ORDER_FILE")
 
     snapshot_state "$OUT/$protocol/protocol-end-state.txt"
 }
