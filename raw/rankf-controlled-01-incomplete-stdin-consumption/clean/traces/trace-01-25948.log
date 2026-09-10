@@ -1,0 +1,11 @@
+timestamp=1789010055095,pid=25948,protocol=clean,order_id=01,order=ACDB,event=ORDER_START_PRE_RESET,marker_exists=false
+timestamp=1789010055114,pid=25948,protocol=clean,order_id=01,order=ACDB,event=ORDER_START_POST_RESET,marker_exists=false
+timestamp=1789010055161,pid=25948,protocol=clean,order_id=01,order=ACDB,event=A_BEFORE,marker_exists=false
+timestamp=1789010055161,pid=25948,protocol=clean,order_id=01,order=ACDB,event=A_AFTER,marker_exists=true
+timestamp=1789010055167,pid=25948,protocol=clean,order_id=01,order=ACDB,event=C_BEFORE,marker_exists=true
+timestamp=1789010055167,pid=25948,protocol=clean,order_id=01,order=ACDB,event=C_AFTER,marker_exists=true
+timestamp=1789010055168,pid=25948,protocol=clean,order_id=01,order=ACDB,event=D_BEFORE,marker_exists=true
+timestamp=1789010055168,pid=25948,protocol=clean,order_id=01,order=ACDB,event=D_AFTER,marker_exists=true
+timestamp=1789010055169,pid=25948,protocol=clean,order_id=01,order=ACDB,event=B_BEFORE,marker_exists=true
+timestamp=1789010055170,pid=25948,protocol=clean,order_id=01,order=ACDB,event=B_PASS,marker_exists=true
+timestamp=1789010055171,pid=25948,protocol=clean,order_id=01,order=ACDB,event=ORDER_END,marker_exists=true
