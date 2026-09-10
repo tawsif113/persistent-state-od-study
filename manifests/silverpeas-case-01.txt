@@ -1,0 +1,56 @@
+Silverpeas real IDoFT persistent-state case
+============================================
+
+IDoFT repository:
+https://github.com/TestingResearchIllinois/idoft
+
+IDoFT revision:
+4903dc9233eead4e4191c66f9ed0b14eea091052
+
+Project:
+https://github.com/Silverpeas/Silverpeas-Setup
+
+Project revision:
+6e3b5a66375f8b6ae177edfe06115376c3bfa681
+
+Module:
+.
+
+Test class:
+org.silverpeas.setup.installation.SilverpeasInstallationTaskTest
+
+A / manually validated state-setter:
+testInstallJustSilverpeas
+
+B / IDoFT OD-Brit:
+testInstall
+
+Persistent state:
+build/resources/test/deployments
+
+Environment:
+Java 11
+Gradle wrapper 7.0
+
+Matched orders:
+01: A -> B
+02: B -> A
+
+Clean-state protocol:
+Delete build/resources/test/deployments before every order execution.
+
+Reused-state protocol:
+Delete build/resources/test/deployments once before the protocol begins,
+then preserve it across all subsequent test and order executions.
+
+Execution-unit note:
+Each test element is executed using a separate Gradle --no-daemon invocation.
+Therefore JVM/process state cannot carry from one test execution to the next.
+Filesystem state can carry unless explicitly reset.
+
+Purpose:
+Determine whether identical A/B order sequences produce different B outcomes
+when cross-execution filesystem state is reset versus reused.
+
+This matched causal experiment is separate from the later iDFlakies detector
+experiment.
