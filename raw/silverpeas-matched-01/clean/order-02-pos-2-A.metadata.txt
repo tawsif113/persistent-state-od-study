@@ -1,0 +1,9 @@
+protocol=clean
+order_id=02
+position=2
+label=A
+method=testInstallJustSilverpeas
+test=org.silverpeas.setup.installation.SilverpeasInstallationTaskTest.testInstallJustSilverpeas
+silverpeas_sha=6e3b5a66375f8b6ae177edfe06115376c3bfa681
+java_home=/usr/lib/jvm/java-11-openjdk-amd64
+command=./gradlew --no-daemon cleanTest test -x processTestResources --tests 'org.silverpeas.setup.installation.SilverpeasInstallationTaskTest.testInstallJustSilverpeas' < /dev/null

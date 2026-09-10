@@ -1,0 +1,6 @@
+study_revision=67deac543d22fb7e576b41d49ff875a4f5f56558
+silverpeas_revision=6e3b5a66375f8b6ae177edfe06115376c3bfa681
+silverpeas_repo=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/silverpeas-setup
+java_home=/usr/lib/jvm/java-11-openjdk-amd64
+java_version=openjdk version "11.0.32" 2026-07-21
+deployment_dir=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/silverpeas-setup/build/resources/test/deployments

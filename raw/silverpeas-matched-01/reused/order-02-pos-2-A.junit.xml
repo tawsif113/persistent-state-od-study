@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.silverpeas.setup.installation.SilverpeasInstallationTaskTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-10T21:17:38" hostname="HOSE2406102293A" time="1.281">
+  <properties/>
+  <testcase name="testInstallJustSilverpeas" classname="org.silverpeas.setup.installation.SilverpeasInstallationTaskTest" time="1.281"/>
+  <system-out><![CDATA[
+ 03:17:39.517727 [install] (Re)Installation of silverpeas.war
+ 03:17:39.522853 [install] (Re)Installation of silverpeas.war: [OK]]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

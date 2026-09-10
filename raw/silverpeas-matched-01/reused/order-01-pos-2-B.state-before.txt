@@ -1,0 +1,4 @@
+timestamp=2026-09-11T03:17:24+06:00
+deployment_dir=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/silverpeas-setup/build/resources/test/deployments
+exists=true
+d|/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/silverpeas-setup/build/resources/test/deployments|4096 bytes
