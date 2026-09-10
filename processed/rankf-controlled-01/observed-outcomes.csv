@@ -1,0 +1,9 @@
+protocol,order_id,order_code,rankf_order,actual_trace_order,brittle_outcome,post_reset_marker_exists,marker_at_b_before,junit_testcase
+clean,01,ACDB,A:C:D:B,ACDB,PASS,false,true,testB_brittle()
+clean,02,CDBA,C:D:B:A,CDBA,FAIL,false,false,testB_brittle()
+clean,03,DBCA,D:B:C:A,DBCA,FAIL,false,false,testB_brittle()
+clean,04,CADB,C:A:D:B,CADB,PASS,false,true,testB_brittle()
+reused,01,ACDB,A:C:D:B,ACDB,PASS,false,true,testB_brittle()
+reused,02,CDBA,C:D:B:A,CDBA,PASS,true,true,testB_brittle()
+reused,03,DBCA,D:B:C:A,DBCA,PASS,true,true,testB_brittle()
+reused,04,CADB,C:A:D:B,CADB,PASS,true,true,testB_brittle()

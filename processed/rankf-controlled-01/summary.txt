@@ -1,0 +1,32 @@
+Controlled RankF observed-outcome analysis
+
+Raw experiment revision: 6b068e4c0d658eb81f37cbb39c736cd6826334f8
+Analysis revision: e9921df84d76ef2086688819c85e983c6db5f3bc
+RankF source SHA256: 4ff985968ba1e2a0dd34f0ca47512a0c23bd80ae45916a864cf56ef7cc3f5935
+
+Semantic adaptation:
+RankF score-update heuristics are retained, but brittle-test
+PASS/FAIL is read from observed JUnit results instead of being
+generated from known BSS ground truth.
+
+Observed brittle outcomes:
+  clean: 01=PASS, 02=FAIL, 03=FAIL, 04=PASS
+  reused: 01=PASS, 02=PASS, 03=PASS, 04=PASS
+
+Final candidate ranking:
+  clean:
+    1. A  score=1
+    2. C  score=0.66666666666666652
+    3. D  score=0.16666666666666657
+  reused:
+    1. D  score=3.1666666666666665
+    2. C  score=1.6666666666666665
+    3. A  score=1
+
+Known state-setter A:
+  clean position: 1
+  reused position: 3
+
+Interpretation must be based on the recorded observations
+and final ranks above; this file does not estimate prevalence
+in real projects.
