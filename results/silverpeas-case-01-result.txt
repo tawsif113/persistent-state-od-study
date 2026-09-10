@@ -1,0 +1,144 @@
+Silverpeas real IDoFT persistent-state result
+==============================================
+
+Project:
+https://github.com/Silverpeas/Silverpeas-Setup
+
+Project revision:
+6e3b5a66375f8b6ae177edfe06115376c3bfa681
+
+IDoFT revision:
+4903dc9233eead4e4191c66f9ed0b14eea091052
+
+Brittle test B:
+org.silverpeas.setup.installation.SilverpeasInstallationTaskTest.testInstall
+
+Manually validated state-setter A:
+org.silverpeas.setup.installation.SilverpeasInstallationTaskTest.testInstallJustSilverpeas
+
+Persistent resource:
+build/resources/test/deployments
+
+Environment:
+Java 11
+Gradle 7.0
+
+Orders
+------
+01: A -> B
+02: B -> A
+
+The same order file was used under both protocols.
+
+SHA256:
+bf9419402f2c8d99447cc9c6d193b3cf82460a1bfc291ff4cf18752078239dfd
+
+Results
+-------
+
+CLEAN STATE
+
+Order 01: A -> B
+A: PASS
+B: PASS
+
+State before A:
+deployments/ absent
+
+State before B:
+deployments/ present
+
+Order 02: B -> A
+B: FAIL
+A: PASS
+
+State before B:
+deployments/ absent
+
+B failure:
+java.io.IOException at SilverpeasInstallationTaskTest.groovy:54
+
+
+REUSED STATE
+
+Order 01: A -> B
+A: PASS
+B: PASS
+
+State before A:
+deployments/ absent
+
+State before B:
+deployments/ present
+
+Order 02: B -> A
+B: PASS
+A: PASS
+
+State before B:
+deployments/ present
+
+
+Matched comparison
+------------------
+
+The critical matched order is:
+
+B -> A
+
+Clean-state protocol:
+deployments/ absent before B
+B -> FAIL
+
+Reused-state protocol:
+deployments/ present before B
+B -> PASS
+
+The order is identical. The difference is whether filesystem state created by
+the preceding A -> B execution is reset or preserved.
+
+Manual causal validation
+------------------------
+
+B executed alone with deployments/ absent:
+FAIL
+
+A executed in a separate Gradle/JVM invocation:
+PASS and creates deployments/
+
+B executed in another separate Gradle/JVM invocation without reset:
+PASS
+
+Therefore the relevant state survives across execution/JVM boundaries.
+
+Interpretation
+--------------
+
+This real IDoFT case demonstrates that cross-execution persistent filesystem
+state can mask an order-dependent brittle-test failure.
+
+Under clean state, the B -> A order exposes the brittle behavior because B
+starts without the required deployments/ directory.
+
+Under reused state, the same B -> A order no longer exposes the failure because
+the directory created during the previous A -> B execution persists on disk.
+
+Thus persistent state changes the observed OD behavior even though the test
+orders are identical.
+
+Scope
+-----
+
+This result establishes the persistent-state effect for this Silverpeas case.
+
+It does not establish prevalence across IDoFT and it is not yet an iDFlakies
+detection result.
+
+Raw evidence:
+raw/silverpeas-matched-01/
+
+Manual reproduction:
+raw/silverpeas-manual-01/
+
+Invalid pilot run:
+raw/silverpeas-matched-01-invalid-stdin/
