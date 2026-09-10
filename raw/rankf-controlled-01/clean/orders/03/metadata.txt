@@ -1,0 +1,7 @@
+protocol=clean
+order_id=03
+order_code=DBCA
+rankf_order=D:B:C:A
+timestamp_start=2026-09-10T09:19:33+06:00
+timestamp_end=2026-09-10T09:19:36+06:00
+gradle_exit_code=1

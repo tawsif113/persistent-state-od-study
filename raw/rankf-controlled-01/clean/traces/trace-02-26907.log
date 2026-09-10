@@ -1,0 +1,10 @@
+timestamp=1789010373206,pid=26907,protocol=clean,order_id=02,order=CDBA,event=ORDER_START_PRE_RESET,marker_exists=true
+timestamp=1789010373219,pid=26907,protocol=clean,order_id=02,order=CDBA,event=ORDER_START_POST_RESET,marker_exists=false
+timestamp=1789010373264,pid=26907,protocol=clean,order_id=02,order=CDBA,event=C_BEFORE,marker_exists=false
+timestamp=1789010373264,pid=26907,protocol=clean,order_id=02,order=CDBA,event=C_AFTER,marker_exists=false
+timestamp=1789010373269,pid=26907,protocol=clean,order_id=02,order=CDBA,event=D_BEFORE,marker_exists=false
+timestamp=1789010373269,pid=26907,protocol=clean,order_id=02,order=CDBA,event=D_AFTER,marker_exists=false
+timestamp=1789010373270,pid=26907,protocol=clean,order_id=02,order=CDBA,event=B_BEFORE,marker_exists=false
+timestamp=1789010373275,pid=26907,protocol=clean,order_id=02,order=CDBA,event=A_BEFORE,marker_exists=false
+timestamp=1789010373275,pid=26907,protocol=clean,order_id=02,order=CDBA,event=A_AFTER,marker_exists=true
+timestamp=1789010373276,pid=26907,protocol=clean,order_id=02,order=CDBA,event=ORDER_END,marker_exists=true

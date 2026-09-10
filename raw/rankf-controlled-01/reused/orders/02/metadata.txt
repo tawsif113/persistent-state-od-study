@@ -1,0 +1,7 @@
+protocol=reused
+order_id=02
+order_code=CDBA
+rankf_order=C:D:B:A
+timestamp_start=2026-09-10T09:19:43+06:00
+timestamp_end=2026-09-10T09:19:46+06:00
+gradle_exit_code=0
