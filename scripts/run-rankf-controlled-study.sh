@@ -128,7 +128,8 @@ run_protocol() {
             ./gradlew test \
                 --tests "$TEST_CLASS" \
                 --no-daemon \
-                --rerun-tasks
+                --rerun-tasks \
+                </dev/null
         ) > >(tee "$order_out/console.log") 2>&1
 
         exit_code=$?
