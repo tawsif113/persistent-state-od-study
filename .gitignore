@@ -22,3 +22,7 @@ __pycache__/
 # Experimental persistent-state marker files
 cases/controlled/idflakies-minimal/state/*
 !cases/controlled/idflakies-minimal/state/.gitkeep
+
+# Controlled RankF persistent-state marker
+cases/controlled/rankf-bss/state/*
+!cases/controlled/rankf-bss/state/.gitkeep

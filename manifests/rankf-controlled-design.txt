@@ -1,0 +1,41 @@
+Controlled RankF persistent-state ranking experiment
+
+Research question:
+Can persistent filesystem state from a previous test-order execution
+change the observed brittle-test outcome and consequently distort the
+ranking of state-setter candidates?
+
+Tests:
+A = true state-setter; writes persistent marker
+B = brittle test; passes only when marker exists
+C = neutral distractor; does not touch marker
+D = neutral distractor; does not touch marker
+
+Fixed order executions:
+01 A -> C -> D -> B
+02 C -> D -> B -> A
+03 D -> B -> C -> A
+04 C -> A -> D -> B
+
+The exact same four orders will be executed under both protocols.
+
+Clean protocol:
+Persistent marker is removed at the beginning of every order execution.
+
+Reused protocol:
+Persistent marker is removed before the protocol begins but is then
+allowed to persist across subsequent order executions.
+
+Known BSS ground truth:
+brittle = B
+state-setter = A
+
+C and D are intentionally unrelated neutral candidates.
+
+Important:
+RankF_O's original getPassOrFail() infers PASS/FAIL from known BSS
+ground truth. This study will instead use experimentally observed
+brittle-test outcomes while retaining RankF_O ranking heuristics.
+
+No experimental execution has been performed as part of this harness
+commit.
