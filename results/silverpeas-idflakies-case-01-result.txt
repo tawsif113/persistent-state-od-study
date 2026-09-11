@@ -1,0 +1,100 @@
+Silverpeas real IDoFT case — iDFlakies persistent-state result
+
+Project:
+https://github.com/Silverpeas/Silverpeas-Setup
+
+Project revision:
+6e3b5a66375f8b6ae177edfe06115376c3bfa681
+
+Study harness revision used for raw run:
+97d642ff9290fe336b29aa5c854229b579e23b3e
+
+Raw evidence checkpoint:
+68c95b195942326739f01c3b20d2c00078d377dd
+
+Environment:
+- Java 11
+- Gradle 7.0
+- JUnit 4.13.2
+- iDFlakies 1.1.0
+- testrunner-gradle-plugin 1.2
+- reverse detector
+
+Tests:
+A = org.silverpeas.setup.installation.SilverpeasInstallationTaskTest.testInstallJustSilverpeas
+B = org.silverpeas.setup.installation.SilverpeasInstallationTaskTest.testInstall
+
+Persistent filesystem resource:
+build/resources/test/deployments
+
+Matched detector orders:
+Original: A -> B
+Reverse:  B -> A
+
+The same seeded original-order file was used under both protocols.
+
+CLEAN PROTOCOL
+
+Original A -> B:
+- order starts with deployments absent
+- A runs with deployments absent
+- A creates deployments
+- B runs with deployments present
+- B passes
+
+Reverse B -> A:
+- new JVM begins with deployments present from the preceding execution
+- clean protocol reset removes deployments before the test order
+- B runs with deployments absent
+- B errors
+- A then recreates deployments
+
+iDFlakies:
+- detected testInstall as order-dependent
+- intended result: PASS
+- revealed reverse result: ERROR
+- detection list contains 1 test
+
+REUSED PROTOCOL
+
+Original A -> B:
+- order starts with deployments absent
+- A creates deployments
+- B runs with deployments present
+- B passes
+
+Reverse B -> A:
+- new JVM begins with deployments present from the preceding execution
+- reused protocol does not remove deployments
+- B runs with deployments present
+- B passes
+- A follows
+
+iDFlakies:
+- detected 0 order-dependent tests
+- detection list is empty
+
+RESULT
+
+Under identical iDFlakies test-order executions, resetting cross-execution
+persistent filesystem state exposes the Silverpeas order dependency, while
+reusing that state masks the order-sensitive outcome.
+
+Clean state:
+  A -> B : B PASS
+  B -> A : B ERROR
+  iDFlakies detects B
+
+Reused state:
+  A -> B : B PASS
+  B -> A : B PASS
+  iDFlakies does not detect B
+
+The causal difference is the deployments directory that persists across
+separate detector JVM executions.
+
+This establishes that, for this real IDoFT case, cross-execution persistent
+filesystem state can change whether iDFlakies reports an order-dependent test.
+
+This result demonstrates consequence for this case; it does not by itself
+establish prevalence across IDoFT.
