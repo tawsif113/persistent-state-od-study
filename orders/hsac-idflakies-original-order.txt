@@ -1,0 +1,2 @@
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testCopyTo
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testDelete

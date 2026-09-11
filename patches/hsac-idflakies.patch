@@ -1,0 +1,130 @@
+diff --git a/pom.xml b/pom.xml
+index f626be0c..78c56bd1 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -516,6 +516,22 @@
+ 					<goals>deploy</goals>
+ 				</configuration>
+ 			</plugin>
++			<!-- HSAC persistent-state iDFlakies study instrumentation -->
++			<plugin>
++				<groupId>edu.illinois.cs</groupId>
++				<artifactId>testrunner-maven-plugin</artifactId>
++				<version>1.2</version>
++				<dependencies>
++					<dependency>
++						<groupId>edu.illinois.cs</groupId>
++						<artifactId>idflakies</artifactId>
++						<version>1.1.0</version>
++					</dependency>
++				</dependencies>
++				<configuration>
++					<className>edu.illinois.cs.dt.tools.detection.DetectorPlugin</className>
++				</configuration>
++			</plugin>
+ 		</plugins>
+ 	</build>
+ 
+diff --git a/src/test/java/nl/hsac/fitnesse/fixture/slim/FileFixtureTest.java b/src/test/java/nl/hsac/fitnesse/fixture/slim/FileFixtureTest.java
+index 27c1e069..125b6bc8 100644
+--- a/src/test/java/nl/hsac/fitnesse/fixture/slim/FileFixtureTest.java
++++ b/src/test/java/nl/hsac/fitnesse/fixture/slim/FileFixtureTest.java
+@@ -5,7 +5,9 @@ import nl.hsac.fitnesse.fixture.util.LineEndingHelper;
+ import org.junit.Test;
+ 
+ import java.io.File;
++import java.io.FileWriter;
+ import java.io.IOException;
++import java.lang.management.ManagementFactory;
+ import java.nio.file.Paths;
+ 
+ import static org.junit.Assert.assertEquals;
+@@ -14,6 +16,60 @@ import static org.junit.Assert.assertTrue;
+ import static org.junit.Assert.fail;
+ 
+ public class FileFixtureTest {
++
++    /*
++     * Persistent-state study instrumentation.
++     *
++     * clean  -> remove temp-copy.txt when a new test-order JVM loads this class
++     * reused -> preserve temp-copy.txt across test-order JVM executions
++     *
++     * With STUDY_PROTOCOL unset, historical test behavior is unchanged.
++     */
++    private static final String STUDY_PROTOCOL =
++            System.getenv("STUDY_PROTOCOL");
++
++    private static final String STUDY_TRACE =
++            System.getenv("STUDY_TRACE");
++
++    private static final File STUDY_STATE_FILE =
++            Paths.get("src", "test", "resources", "temp-copy.txt")
++                    .toAbsolutePath()
++                    .toFile();
++
++    static {
++        if (STUDY_PROTOCOL != null) {
++            traceStudy("ORDER_START_PRE_RESET");
++
++            if ("clean".equalsIgnoreCase(STUDY_PROTOCOL)) {
++                if (STUDY_STATE_FILE.exists()) {
++                    STUDY_STATE_FILE.delete();
++                }
++            }
++
++            traceStudy("ORDER_START_POST_RESET");
++        }
++    }
++
++    private static void traceStudy(String event) {
++        if (STUDY_TRACE == null) {
++            return;
++        }
++
++        String pid = ManagementFactory.getRuntimeMXBean().getName();
++
++        try (FileWriter writer = new FileWriter(STUDY_TRACE, true)) {
++            writer.write(
++                    STUDY_PROTOCOL + "," +
++                    pid + "," +
++                    System.currentTimeMillis() + "," +
++                    event + "," +
++                    STUDY_STATE_FILE.exists() +
++                    System.lineSeparator()
++            );
++        } catch (IOException ignored) {
++            // Instrumentation must not affect historical test behavior.
++        }
++    }
+     private final FileFixture fixture = new FileFixture();
+     private final String txtFilename = "testFileFixture.txt";
+     private final String copyFilename = "temp-copy.txt";
+@@ -72,6 +128,7 @@ public class FileFixtureTest {
+ 
+     @Test
+     public void testCopyTo() {
++        traceStudy("A_BEFORE");
+         fixture.setDirectory(testResourcesDir);
+         assertTrue(fixture.exists(txtFilename));
+         try {
+@@ -82,6 +139,7 @@ public class FileFixtureTest {
+             fail("Should not happen: " + ioe.getMessage());
+         }
+         assertTrue(fixture.exists(copyFilename));
++        traceStudy("A_AFTER");
+     }
+ 
+     @Test
+@@ -142,9 +200,11 @@ public class FileFixtureTest {
+ 
+     @Test
+     public void testDelete() {
++        traceStudy("B_BEFORE");
+         try {
+             fixture.setDirectory(testResourcesDir);
+             fixture.delete(copyFilename);
++            traceStudy("B_AFTER");
+         } catch (SlimFixtureException sfe) {
+             fail("Should not happen: " + sfe.getMessage());
+         }

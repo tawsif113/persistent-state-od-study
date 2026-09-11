@@ -1,0 +1,77 @@
+HSAC FitNesse Fixtures — iDFlakies persistent-state detector experiment
+
+Project:
+https://github.com/fhoeben/hsac-fitnesse-fixtures
+
+Pinned project revision:
+a64c18d9c4bac8271275c7b089d40be20f0604b5
+
+Detector checkout branch:
+study-hsac-idflakies
+
+iDFlakies:
+edu.illinois.cs:idflakies:1.1.0
+
+iDFlakies SHA256:
+9c2056143ea8961ba39d3ca147fa076e0a8dcb388e449cfec0cc0f6918ce192b
+
+testrunner Maven plugin:
+edu.illinois.cs:testrunner-maven-plugin:1.2
+
+testrunner Maven plugin SHA256:
+55e4be10bb2b528e39adee34ee806971ff934469a4977bcf39fecd3ad414b321
+
+Detector configuration class:
+edu.illinois.cs.dt.tools.detection.DetectorPlugin
+
+Maven goal:
+testrunner:testplugin
+
+A / state-setter:
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testCopyTo
+
+B / brittle:
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testDelete
+
+Persistent filesystem resource:
+src/test/resources/temp-copy.txt
+
+Seeded original detector order:
+A -> B
+
+JUnit4 testrunner identifiers:
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testCopyTo
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testDelete
+
+Patch:
+patches/hsac-idflakies.patch
+
+Patch SHA256:
+eb4ad225f20e66bcc98a0d7e4dcca8e89953996684e39fe83cc83dc197b5a67e
+
+Order file:
+orders/hsac-idflakies-original-order.txt
+
+Order SHA256:
+6250d7c2186433c5ac749aaa4383f362a715e9f6106fb44bdc54e2db3c22afb7
+
+Instrumentation events:
+ORDER_START_PRE_RESET
+ORDER_START_POST_RESET
+A_BEFORE
+A_AFTER
+B_BEFORE
+B_AFTER
+
+Protocol semantics:
+clean = remove temp-copy.txt when each detector test-order JVM loads FileFixtureTest
+reused = preserve temp-copy.txt across detector test-order JVM executions
+
+Pre-execution validation:
+- effective POM contains testrunner-maven-plugin 1.2
+- effective POM contains idflakies 1.1.0
+- effective POM configures DetectorPlugin
+- mvn help:describe resolves testrunner:testplugin
+- mvn -DskipTests test-compile succeeds
+
+No detector execution had been performed before this manifest and patch were created.
