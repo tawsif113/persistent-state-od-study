@@ -1,0 +1,23 @@
+Silverpeas iDFlakies experiment
+
+project=https://github.com/Silverpeas/Silverpeas-Setup
+project_revision=6e3b5a66375f8b6ae177edfe06115376c3bfa681
+
+idflakies=1.1.0
+testrunner-gradle-plugin=1.2
+java=11
+detector=reverse
+
+A=org.silverpeas.setup.installation.SilverpeasInstallationTaskTest#testInstallJustSilverpeas
+B=org.silverpeas.setup.installation.SilverpeasInstallationTaskTest#testInstall
+
+original_order=A -> B
+reverse_order=B -> A
+
+persistent_resource=build/resources/test/deployments
+
+clean_protocol=delete deployments directory at each test-order JVM initialization
+reused_protocol=allow deployments directory to persist across test-order executions
+
+Both protocols begin with the persistent resource absent and use the same
+seeded original-order file.

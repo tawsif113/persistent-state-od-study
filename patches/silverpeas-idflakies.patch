@@ -1,0 +1,110 @@
+diff --git a/build.gradle b/build.gradle
+index 276ad02..fa4d31b 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -25,11 +25,18 @@ import org.apache.tools.ant.filters.ReplaceTokens
+ 
+ buildscript {
+   repositories {
++    mavenCentral()
+     maven {
+       url 'https://www.silverpeas.org/nexus/content/groups/silverpeas'
+     }
+     mavenLocal()
+   }
++
++  dependencies {
++    classpath 'edu.illinois.cs:idflakies:1.1.0'
++    classpath 'edu.illinois.cs:testrunner-gradle-plugin:1.2'
++    classpath 'com.google.code.gson:gson:2.13.2'
++  }
+ }
+ 
+ plugins {
+@@ -41,6 +48,8 @@ plugins {
+   id 'groovy'
+ }
+ 
++apply plugin: 'testrunner'
++
+ description = 'The Gradle plugin to set up Silverpeas. It is used both to install or to upgrade Silverpeas.'
+ group = 'org.silverpeas'
+ version = '6.4-SNAPSHOT'
+diff --git a/src/test/groovy/org/silverpeas/setup/installation/SilverpeasInstallationTaskTest.groovy b/src/test/groovy/org/silverpeas/setup/installation/SilverpeasInstallationTaskTest.groovy
+index 2912b9d..cf90d00 100644
+--- a/src/test/groovy/org/silverpeas/setup/installation/SilverpeasInstallationTaskTest.groovy
++++ b/src/test/groovy/org/silverpeas/setup/installation/SilverpeasInstallationTaskTest.groovy
+@@ -16,6 +16,43 @@ import static org.silverpeas.setup.api.SilverpeasSetupTaskNames.INSTALL
+  */
+ class SilverpeasInstallationTaskTest {
+ 
++  private static final String STUDY_PROTOCOL =
++      (System.getenv('STUDY_PROTOCOL') ?: 'reused').toLowerCase()
++
++  private static final File STUDY_DEPLOY_DIR =
++      new File(System.getenv('SILVERPEAS_DEPLOY_DIR') ?: 'build/resources/test/deployments')
++
++  private static final File STUDY_TRACE_DIR =
++      new File(System.getenv('STUDY_TRACE_DIR') ?: 'build/study-trace')
++
++  static {
++    trace('ORDER_START_PRE_RESET')
++
++    if (STUDY_PROTOCOL == 'clean') {
++      FileUtils.deleteQuietly(STUDY_DEPLOY_DIR)
++    } else if (STUDY_PROTOCOL != 'reused') {
++      throw new IllegalStateException("Unknown STUDY_PROTOCOL: ${STUDY_PROTOCOL}")
++    }
++
++    trace('ORDER_START_POST_RESET')
++  }
++
++  private static void trace(String event) {
++    STUDY_TRACE_DIR.mkdirs()
++
++    long pid = ProcessHandle.current().pid()
++    File traceFile = new File(STUDY_TRACE_DIR, "trace-${pid}.log")
++
++    traceFile << (
++        "timestamp=${System.currentTimeMillis()}" +
++        ",pid=${pid}" +
++        ",protocol=${STUDY_PROTOCOL}" +
++        ",event=${event}" +
++        ",deployments_exists=${STUDY_DEPLOY_DIR.exists()}" +
++        System.lineSeparator()
++    )
++  }
++
+   private Project project
+   private TestContext context
+ 
+@@ -27,6 +64,8 @@ class SilverpeasInstallationTaskTest {
+ 
+   @Test
+   void testInstallJustSilverpeas() {
++    trace('A_BEFORE')
++
+     SilverpeasInstallationTask task = project.tasks.findByPath(INSTALL.name)
+ 
+     def mock = new MockFor(JBossServer)
+@@ -44,10 +83,13 @@ class SilverpeasInstallationTaskTest {
+     task.install()
+ 
+     mock.verify(jboss)
++    trace('A_AFTER')
+   }
+ 
+   @Test
+   void testInstall() {
++    trace('B_BEFORE')
++
+     SilverpeasInstallationTask task = project.tasks.findByPath(INSTALL.name)
+ 
+     File jackrabbit = new File(task.installation.deploymentDir.get(), 'jackrabbit-jca.rar')
+@@ -76,5 +118,6 @@ class SilverpeasInstallationTaskTest {
+     FileUtils.deleteQuietly(jackrabbit)
+ 
+     mock.verify(jboss)
++    trace('B_AFTER')
+   }
+ }
