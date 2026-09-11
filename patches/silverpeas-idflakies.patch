@@ -1,5 +1,5 @@
 diff --git a/build.gradle b/build.gradle
-index 276ad02..fa4d31b 100644
+index 276ad02..6f23cb6 100644
 --- a/build.gradle
 +++ b/build.gradle
 @@ -25,11 +25,18 @@ import org.apache.tools.ant.filters.ReplaceTokens
@@ -30,6 +30,19 @@ index 276ad02..fa4d31b 100644
  description = 'The Gradle plugin to set up Silverpeas. It is used both to install or to upgrade Silverpeas.'
  group = 'org.silverpeas'
  version = '6.4-SNAPSHOT'
+@@ -164,3 +173,12 @@ processTestResources {
+         tokens: [buildDir: buildDir.path.replace('\\', '/')], beginToken: '${', endToken: '}')
+   }
+ }
++
++/* TESTRUNNER_GROOVY_DISCOVERY_SHIM
++ * testrunner-gradle-plugin does not enumerate compileTestGroovy outputs.
++ * Expose the existing Groovy test classes through compileTestJava outputs
++ * without changing or translating the tests.
++ */
++tasks.named('compileTestJava') {
++  outputs.dir("$buildDir/classes/groovy/test")
++}
 diff --git a/src/test/groovy/org/silverpeas/setup/installation/SilverpeasInstallationTaskTest.groovy b/src/test/groovy/org/silverpeas/setup/installation/SilverpeasInstallationTaskTest.groovy
 index 2912b9d..cf90d00 100644
 --- a/src/test/groovy/org/silverpeas/setup/installation/SilverpeasInstallationTaskTest.groovy
