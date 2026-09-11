@@ -1,0 +1,91 @@
+HSAC FitNesse Fixtures real IDoFT case — matched persistent-state result
+
+Project:
+https://github.com/fhoeben/hsac-fitnesse-fixtures
+
+Project revision:
+a64c18d9c4bac8271275c7b089d40be20f0604b5
+
+Experiment design checkpoint:
+31fe1f5d4d5ff3bab81c63bd74f99f2b8e2d5997
+
+Runner checkpoint:
+2857a52c582a4770660b21f55364abd5b9bf0add
+
+Raw evidence checkpoint:
+cdfa58d206e5b9bce9e4785333483a174df566bb
+
+Order SHA256:
+519ab2a69ad914feac3697edc1f2e1d50ee043d8e8b1d1ccae8130b252845465
+
+Environment:
+- OpenJDK 11.0.32
+- Maven 3.8.7
+- one Maven invocation per test execution
+
+Tests:
+A = nl.hsac.fitnesse.fixture.slim.FileFixtureTest#testCopyTo
+B = nl.hsac.fitnesse.fixture.slim.FileFixtureTest#testDelete
+
+Persistent filesystem resource:
+src/test/resources/temp-copy.txt
+
+Matched execution sequence under both protocols:
+01: A
+02: B
+
+CLEAN PROTOCOL
+
+A:
+- state before: ABSENT
+- result: PASS
+- state after: PRESENT
+
+B:
+- temp-copy.txt is reset before execution
+- state before: ABSENT
+- result: FAIL
+- failure reason: testDelete cannot find temp-copy.txt
+- state after: ABSENT
+
+REUSED PROTOCOL
+
+A:
+- state before: ABSENT
+- result: PASS
+- state after: PRESENT
+
+B:
+- no reset is performed between A and B
+- state before: PRESENT
+- result: PASS
+- state after: ABSENT because testDelete consumes the file by deleting it
+
+RESULT
+
+The exact same A -> B execution sequence was used under clean and reused
+protocols.
+
+Clean:
+  A: ABSENT  -> PASS -> PRESENT
+  B: ABSENT  -> FAIL -> ABSENT
+
+Reused:
+  A: ABSENT  -> PASS -> PRESENT
+  B: PRESENT -> PASS -> ABSENT
+
+The difference in B's result is caused by cross-execution filesystem state.
+A creates temp-copy.txt in one Maven execution. Under the reused protocol,
+that file remains available to B in the following separate Maven execution,
+so B passes. Under the clean protocol, the file is removed before B, so B
+fails.
+
+This establishes that, for this real IDoFT case, persistent filesystem state
+across separate test executions changes the observed outcome of the brittle
+test under an otherwise identical execution sequence.
+
+This result demonstrates consequence for this case; it does not establish
+prevalence across IDoFT.
+
+This matched experiment measures test outcome sensitivity to persistent state.
+It does not yet measure iDFlakies detector reporting for this HSAC case.
