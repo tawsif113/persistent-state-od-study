@@ -1,0 +1,19 @@
+INVALID DETECTOR RUN
+
+Groovy test discovery succeeded:
+
+[INFO] Getting original results (2 tests).
+
+However, the seeded order used IDoFT-style identifiers:
+
+package.Class#method
+
+The testrunner JUnit4 executor expects:
+
+package.Class.method
+
+Both requested tests were therefore reported as missing, producing:
+
+EmptyTestListException: No tests remaining for test order: []
+
+This run is not a valid clean-vs-reused detector result.

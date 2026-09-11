@@ -1,0 +1,12 @@
+  Skipped missing test : org.silverpeas.setup.installation.SilverpeasInstallationTaskTest#testInstallJustSilverpeas
+  Skipped missing test : org.silverpeas.setup.installation.SilverpeasInstallationTaskTest#testInstall
+edu.illinois.cs.testrunner.execution.EmptyTestListException: No tests remaining for test order: []
+	at edu.illinois.cs.testrunner.execution.JUnitTestExecutor.execute(JUnitTestExecutor.java:230)
+	at edu.illinois.cs.testrunner.execution.JUnitTestExecutor.executeWithJUnit4Runner(JUnitTestExecutor.java:327)
+	at edu.illinois.cs.testrunner.execution.JUnitTestExecutor.runOrder(JUnitTestExecutor.java:49)
+	at edu.illinois.cs.testrunner.execution.Executor$.$anonfun$run$1(Executor.scala:30)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at scala.util.Try$.apply(Try.scala:209)
+	at edu.illinois.cs.testrunner.execution.Executor$.run(Executor.scala:28)
+	at edu.illinois.cs.testrunner.execution.Executor$.main(Executor.scala:18)
+	at edu.illinois.cs.testrunner.execution.Executor.main(Executor.scala)
