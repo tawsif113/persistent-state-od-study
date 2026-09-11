@@ -1,0 +1,17 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/kazi/.gradle/caches/7.0/generated-gradle-jars/gradle-api-7.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/kazi/.gradle/caches/jars-8/0aac9cf192ce7e40322882edc6b6fc45/log4j-slf4j-impl-2.7.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.gradle.internal.logging.slf4j.OutputEventListenerBackedLoggerContext]
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access using Lookup on org.gradle.internal.classloader.ClassLoaderUtils$AbstractClassLoaderLookuper (file:/home/kazi/.gradle/caches/7.0/generated-gradle-jars/gradle-api-7.0.jar) to class java.lang.ClassLoader
+WARNING: Please consider reporting this to the maintainers of org.gradle.internal.classloader.ClassLoaderUtils$AbstractClassLoaderLookuper
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+ 19:57:59.828226 [install] (Re)Installation of jackrabbit-jca.rar
+ 19:57:59.83401 [install] (Re)Installation of jackrabbit-jca.rar: [OK]
+ 19:57:59.834721 [install] (Re)Installation of silverpeas.war
+ 19:57:59.835388 [install] (Re)Installation of silverpeas.war: [OK]
+ 19:57:59.894483 [install] (Re)Installation of silverpeas.war
+ 19:57:59.895364 [install] (Re)Installation of silverpeas.war: [OK]

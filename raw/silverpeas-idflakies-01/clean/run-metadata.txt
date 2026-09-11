@@ -1,0 +1,6 @@
+protocol=clean
+deployments_exists_initial=false
+order_sha256=c1a9b67dbd0198e1206f6ffab205ff28c1ad3af862630fd85d91c2aa9766f56c
+
+org.silverpeas.setup.installation.SilverpeasInstallationTaskTest.testInstallJustSilverpeas
+org.silverpeas.setup.installation.SilverpeasInstallationTaskTest.testInstall

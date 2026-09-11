@@ -1,0 +1,59 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/kazi/.gradle/caches/7.0/generated-gradle-jars/gradle-api-7.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/kazi/.gradle/caches/jars-8/0aac9cf192ce7e40322882edc6b6fc45/log4j-slf4j-impl-2.7.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.gradle.internal.logging.slf4j.OutputEventListenerBackedLoggerContext]
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access using Lookup on org.gradle.internal.classloader.ClassLoaderUtils$AbstractClassLoaderLookuper (file:/home/kazi/.gradle/caches/7.0/generated-gradle-jars/gradle-api-7.0.jar) to class java.lang.ClassLoader
+WARNING: Please consider reporting this to the maintainers of org.gradle.internal.classloader.ClassLoaderUtils$AbstractClassLoaderLookuper
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+java.io.IOException: No such file or directory
+	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.base/java.io.File.createNewFile(File.java:1035)
+	at java_io_File$createNewFile$3.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+	at org.silverpeas.setup.installation.SilverpeasInstallationTaskTest.testInstall(SilverpeasInstallationTaskTest.groovy:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at edu.illinois.cs.testrunner.execution.JUnitTestExecutor.execute(JUnitTestExecutor.java:259)
+	at edu.illinois.cs.testrunner.execution.JUnitTestExecutor.executeWithJUnit4Runner(JUnitTestExecutor.java:327)
+	at edu.illinois.cs.testrunner.execution.JUnitTestExecutor.runOrder(JUnitTestExecutor.java:49)
+	at edu.illinois.cs.testrunner.execution.Executor$.$anonfun$run$1(Executor.scala:30)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at scala.util.Try$.apply(Try.scala:209)
+	at edu.illinois.cs.testrunner.execution.Executor$.run(Executor.scala:28)
+	at edu.illinois.cs.testrunner.execution.Executor$.main(Executor.scala:18)
+	at edu.illinois.cs.testrunner.execution.Executor.main(Executor.scala)

@@ -1,0 +1,5 @@
+timestamp=1789135063055,pid=113597,protocol=clean,event=ORDER_START_PRE_RESET,deployments_exists=false
+timestamp=1789135063088,pid=113597,protocol=clean,event=ORDER_START_POST_RESET,deployments_exists=false
+timestamp=1789135064941,pid=113597,protocol=clean,event=B_BEFORE,deployments_exists=false
+timestamp=1789135065014,pid=113597,protocol=clean,event=A_BEFORE,deployments_exists=false
+timestamp=1789135065139,pid=113597,protocol=clean,event=A_AFTER,deployments_exists=true
