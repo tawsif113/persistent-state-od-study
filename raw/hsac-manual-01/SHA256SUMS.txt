@@ -1,0 +1,6 @@
+e78bda5c00f7dc70a8933fbff65326006a6b1aae893931b30ca5ca5ac36b1fc0  raw/hsac-manual-01/01-b-alone.log
+e42fe1512ea759dacc80094968c8764a72ab5cff219752e5ee31284842d68236  raw/hsac-manual-01/01-b-alone-metadata.txt
+fcc6ef720a00cbf53cfe02cf621453bf293482285d1ed710d866d9d05c56b966  raw/hsac-manual-01/02-a-alone.log
+76a4171667091839eb5e6b4d8ffc1f59aafaaececdc18173fdd75868dc764900  raw/hsac-manual-01/02-a-alone-metadata.txt
+2dc6f7cf35a85905a4615fcb57dab3bcacc90c62dc470430d12d1554c2bcafd7  raw/hsac-manual-01/03-b-after-a.log
+0953a6e7b3996c006bef4d19a19680f59b32e90b9fd78525f75086917c18421c  raw/hsac-manual-01/03-b-after-a-metadata.txt

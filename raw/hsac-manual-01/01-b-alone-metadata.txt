@@ -1,0 +1,7 @@
+project_revision=a64c18d9c4bac8271275c7b089d40be20f0604b5
+test=B=testDelete
+state_before=ABSENT
+openjdk version "11.0.32" 2026-07-21
+[1mApache Maven 3.8.7[m
+exit_code=1
+state_after=ABSENT

@@ -1,0 +1,5 @@
+test=B=testDelete
+preceded_by_separate_execution=A=testCopyTo
+state_before=PRESENT
+exit_code=0
+state_after=ABSENT
