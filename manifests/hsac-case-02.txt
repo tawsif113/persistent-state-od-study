@@ -1,0 +1,44 @@
+HSAC FitNesse Fixtures persistent-state case
+
+Project:
+https://github.com/fhoeben/hsac-fitnesse-fixtures
+
+Pinned revision:
+a64c18d9c4bac8271275c7b089d40be20f0604b5
+
+IDoFT brittle test:
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testDelete
+
+A / state-setter:
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testCopyTo
+
+B / brittle:
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testDelete
+
+Persistent resource:
+src/test/resources/temp-copy.txt
+
+Matched execution sequence under both protocols:
+01: A
+02: B
+
+Clean protocol:
+reset temp-copy.txt before every execution.
+
+Reused protocol:
+reset temp-copy.txt only before the protocol begins; allow state to persist
+between executions.
+
+Important:
+B deletes temp-copy.txt when it succeeds. Therefore A->B followed by B->A
+is not an appropriate cross-execution matched schedule for this case,
+because A->B consumes the persistent state before the next execution.
+
+Order file:
+orders/hsac-case-02-orders.csv
+
+Order SHA256:
+519ab2a69ad914feac3697edc1f2e1d50ee043d8e8b1d1ccae8130b252845465
+
+Manual causal evidence checkpoint:
+97099813108a877e860860a825707d69a96d255b

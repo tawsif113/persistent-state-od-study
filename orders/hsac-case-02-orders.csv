@@ -1,0 +1,3 @@
+execution_id,position,label,method
+01,1,A,nl.hsac.fitnesse.fixture.slim.FileFixtureTest#testCopyTo
+02,1,B,nl.hsac.fitnesse.fixture.slim.FileFixtureTest#testDelete
