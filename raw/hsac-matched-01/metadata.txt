@@ -1,0 +1,16 @@
+study_revision=2857a52c582a4770660b21f55364abd5b9bf0add
+project_revision=a64c18d9c4bac8271275c7b089d40be20f0604b5
+order_sha256=519ab2a69ad914feac3697edc1f2e1d50ee043d8e8b1d1ccae8130b252845465
+persistent_resource=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/hsac-fitnesse-fixtures/src/test/resources/temp-copy.txt
+execution_sequence=A_then_B
+execution_model=one_Maven_invocation_per_test
+
+openjdk version "11.0.32" 2026-07-21
+OpenJDK Runtime Environment (build 11.0.32+9-post-1ubuntu1-24.04-Ubuntu)
+OpenJDK 64-Bit Server VM (build 11.0.32+9-post-1ubuntu1-24.04-Ubuntu, mixed mode, sharing)
+
+[1mApache Maven 3.8.7[m
+Maven home: /usr/share/maven
+Java version: 11.0.32, vendor: Ubuntu, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-30-generic", arch: "amd64", family: "unix"

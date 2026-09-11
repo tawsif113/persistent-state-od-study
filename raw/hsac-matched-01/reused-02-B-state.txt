@@ -1,0 +1,8 @@
+protocol=reused
+execution_id=02
+label=B
+test=nl.hsac.fitnesse.fixture.slim.FileFixtureTest#testDelete
+reset_before=no
+state_before=PRESENT
+exit_code=0
+state_after=ABSENT

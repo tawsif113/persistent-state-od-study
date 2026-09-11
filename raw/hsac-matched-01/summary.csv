@@ -1,0 +1,5 @@
+protocol,execution_id,label,test,state_before,exit_code,state_after
+clean,01,A,nl.hsac.fitnesse.fixture.slim.FileFixtureTest#testCopyTo,ABSENT,0,PRESENT
+clean,02,B,nl.hsac.fitnesse.fixture.slim.FileFixtureTest#testDelete,ABSENT,1,ABSENT
+reused,01,A,nl.hsac.fitnesse.fixture.slim.FileFixtureTest#testCopyTo,ABSENT,0,PRESENT
+reused,02,B,nl.hsac.fitnesse.fixture.slim.FileFixtureTest#testDelete,PRESENT,0,ABSENT
