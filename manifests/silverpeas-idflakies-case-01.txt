@@ -23,3 +23,7 @@ Both protocols begin with the persistent resource absent and use the same
 seeded original-order file.
 
 groovy_discovery_shim=Expose build/classes/groovy/test through compileTestJava task outputs so testrunner can discover the original compiled Groovy/JUnit4 tests. No Silverpeas test logic is translated or replaced.
+
+testrunner_junit4_identifier_format=package.Class.method
+idoft_identifier_format=package.Class#method
+The detector order uses testrunner's JUnit4 package.Class.method representation.
