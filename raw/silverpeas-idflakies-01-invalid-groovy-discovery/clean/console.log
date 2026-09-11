@@ -1,0 +1,24 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. See https://docs.gradle.org/7.0/userguide/gradle_daemon.html#sec:disabling_the_daemon.
+Daemon will be stopped at the end of the build 
+> Task :compileJava NO-SOURCE
+> Task :compileGroovy UP-TO-DATE
+> Task :pluginDescriptors UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :jar
+> Task :sourcesJar
+> Task :assemble
+> Task :compileTestJava NO-SOURCE
+> Task :compileTestGroovy UP-TO-DATE
+> Task :processTestResources UP-TO-DATE
+> Task :testClasses UP-TO-DATE
+
+> Task :testplugin
+---------------------------------------------------
+ERROR (WRITE_ERROR_STDOUT_STRING): org.silverpeas::6.4-SNAPSHOT
+Message was:
+Module is not using a supported test framework (probably not JUnit), or there is no test.
+TRY_COPY_ALL_FAILING_TEST_OUTPUT
+
+BUILD SUCCESSFUL in 6s
+8 actionable tasks: 3 executed, 5 up-to-date

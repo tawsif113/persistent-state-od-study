@@ -1,0 +1,3 @@
+Module is not using a supported test framework (probably not JUnit), or there is no test.
+
+org.silverpeas::6.4-SNAPSHOT

@@ -1,0 +1,6 @@
+study_revision=b748a272f4f9dbc46d7b0723552a7d36a3525b58
+project_revision=6e3b5a66375f8b6ae177edfe06115376c3bfa681
+patch_sha256=7aad8fc6db75084d6fb9fd46c1333a5956f82f0c7ef2ee3b5aedea46fa16d95d
+order_sha256=4b804741036f199602222b056d63d33bea4f0a367615e36c455d09645027ed1e
+deployment_dir=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/silverpeas-setup-idflakies/build/resources/test/deployments
+java=openjdk version "11.0.32" 2026-07-21

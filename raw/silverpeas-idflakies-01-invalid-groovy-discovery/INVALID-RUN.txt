@@ -1,0 +1,18 @@
+INVALID DETECTOR RUN
+
+The iDFlakies/testrunner task loaded successfully, but no Silverpeas tests
+were discovered.
+
+Observed message in both protocols:
+
+Module is not using a supported test framework (probably not JUnit), or there is no test.
+
+Silverpeas does use JUnit 4, but the relevant tests are Groovy tests compiled
+by compileTestGroovy.
+
+The testrunner Gradle adapter discovers compiled test directories from
+compileTestJava, compileTestScala, and compileTestKotlin, but does not include
+compileTestGroovy.
+
+Therefore this run must not be treated as an iDFlakies detection result.
+No valid clean-vs-reused detector comparison occurred.

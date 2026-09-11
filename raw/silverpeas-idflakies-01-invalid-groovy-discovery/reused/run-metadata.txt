@@ -1,0 +1,6 @@
+protocol=reused
+deployments_exists_initial=false
+order_sha256=4b804741036f199602222b056d63d33bea4f0a367615e36c455d09645027ed1e
+
+org.silverpeas.setup.installation.SilverpeasInstallationTaskTest#testInstallJustSilverpeas
+org.silverpeas.setup.installation.SilverpeasInstallationTaskTest#testInstall
