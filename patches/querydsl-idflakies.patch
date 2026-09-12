@@ -1,0 +1,154 @@
+diff --git a/querydsl-hibernate-search/pom.xml b/querydsl-hibernate-search/pom.xml
+index 044d9af5b..0d7cbc165 100644
+--- a/querydsl-hibernate-search/pom.xml
++++ b/querydsl-hibernate-search/pom.xml
+@@ -139,6 +139,22 @@
+           </systemProperties>
+         </configuration>
+       </plugin>   
++      <!-- Querydsl persistent-state iDFlakies study -->
++      <plugin>
++        <groupId>edu.illinois.cs</groupId>
++        <artifactId>testrunner-maven-plugin</artifactId>
++        <version>1.2</version>
++        <dependencies>
++          <dependency>
++            <groupId>edu.illinois.cs</groupId>
++            <artifactId>idflakies</artifactId>
++            <version>1.1.0</version>
++          </dependency>
++        </dependencies>
++        <configuration>
++          <className>edu.illinois.cs.dt.tools.detection.DetectorPlugin</className>
++        </configuration>
++      </plugin>
+     </plugins>
+   </build>
+     
+diff --git a/querydsl-hibernate-search/src/test/java/com/querydsl/hibernate/search/AbstractQueryTest.java b/querydsl-hibernate-search/src/test/java/com/querydsl/hibernate/search/AbstractQueryTest.java
+index abbc15ad7..df1ce17f5 100644
+--- a/querydsl-hibernate-search/src/test/java/com/querydsl/hibernate/search/AbstractQueryTest.java
++++ b/querydsl-hibernate-search/src/test/java/com/querydsl/hibernate/search/AbstractQueryTest.java
+@@ -14,7 +14,9 @@
+ package com.querydsl.hibernate.search;
+ 
+ import java.io.File;
++import java.io.FileWriter;
+ import java.io.IOException;
++import java.lang.management.ManagementFactory;
+ import java.io.InputStream;
+ import java.sql.SQLException;
+ import java.util.List;
+@@ -33,12 +35,82 @@ import com.querydsl.core.util.FileUtils;
+ 
+ public abstract class AbstractQueryTest {
+ 
++    /*
++     * Persistent-state study instrumentation.
++     *
++     * clean  -> remove the real Lucene index when a new test-order JVM starts
++     * reused -> preserve the Lucene index across test-order JVM executions
++     *
++     * Historical behavior is unchanged when STUDY_PROTOCOL is unset.
++     */
++    private static final String STUDY_PROTOCOL =
++            System.getenv("STUDY_PROTOCOL");
++
++    private static final String STUDY_TRACE =
++            System.getenv("STUDY_TRACE");
++
++    private static final File STUDY_LUCENE_DIR =
++            new File("target/lucene");
++
++    private static final File STUDY_DERBY_DIR =
++            new File("target/derbydb");
++
++    static {
++        if (STUDY_PROTOCOL != null) {
++            traceStudy("ORDER_START_PRE_RESET");
++
++            if ("clean".equalsIgnoreCase(STUDY_PROTOCOL)) {
++                try {
++                    FileUtils.delete(STUDY_LUCENE_DIR);
++                } catch (IOException e) {
++                    throw new ExceptionInInitializerError(e);
++                }
++            }
++
++            traceStudy("ORDER_START_POST_RESET");
++        }
++    }
++
++    protected static void traceStudy(String event) {
++        if (STUDY_TRACE == null) {
++            return;
++        }
++
++        FileWriter writer = null;
++
++        try {
++            writer = new FileWriter(STUDY_TRACE, true);
++
++            writer.write(
++                    STUDY_PROTOCOL + "," +
++                    ManagementFactory.getRuntimeMXBean().getName() + "," +
++                    System.currentTimeMillis() + "," +
++                    event + "," +
++                    STUDY_LUCENE_DIR.exists() + "," +
++                    STUDY_DERBY_DIR.exists() +
++                    System.getProperty("line.separator")
++            );
++        } catch (IOException ignored) {
++            // Tracing must not alter historical test behavior.
++        } finally {
++            if (writer != null) {
++                try {
++                    writer.close();
++                } catch (IOException ignored) {
++                    // Ignore trace cleanup failures.
++                }
++            }
++        }
++    }
++
+     private static SessionFactory sessionFactory;
+ 
+     @BeforeClass
+     public static void setUpClass() throws IOException {
++        traceStudy("BEFORE_HISTORICAL_CLEANUP");
+         FileUtils.delete(new File("target/derbydb"));
+         FileUtils.delete(new File("target/lucene3"));
++        traceStudy("AFTER_HISTORICAL_CLEANUP");
+         AnnotationConfiguration cfg = new AnnotationConfiguration();
+         cfg.addAnnotatedClass(User.class);
+         Properties props = new Properties();
+diff --git a/querydsl-hibernate-search/src/test/java/com/querydsl/hibernate/search/SearchQueryTest.java b/querydsl-hibernate-search/src/test/java/com/querydsl/hibernate/search/SearchQueryTest.java
+index b2bd5da59..3c79859e2 100644
+--- a/querydsl-hibernate-search/src/test/java/com/querydsl/hibernate/search/SearchQueryTest.java
++++ b/querydsl-hibernate-search/src/test/java/com/querydsl/hibernate/search/SearchQueryTest.java
+@@ -50,8 +50,10 @@ public class SearchQueryTest extends AbstractQueryTest {
+ 
+     @Test
+     public void exists() {
++        traceStudy("A_BEFORE");
+         assertTrue(query().where(user.emailAddress.eq("bob@example.com")).fetchCount() > 0);
+         assertFalse(query().where(user.emailAddress.eq("bobby@example.com")).fetchCount() > 0);
++        traceStudy("A_AFTER");
+     }
+ 
+     @Test
+@@ -130,12 +132,14 @@ public class SearchQueryTest extends AbstractQueryTest {
+ 
+     @Test
+     public void listResults() {
++        traceStudy("B_BEFORE");
+         BooleanExpression filter = user.middleName.eq("X");
+         QueryResults<User> users = query().where(filter).orderBy(
+                 user.firstName.asc()).limit(2).fetchResults();
+         List<String> asc = getFirstNames(users.getResults());
+         assertEquals(Arrays.asList("Anton", "Barbara"), asc);
+         assertEquals(4, users.getTotal());
++        traceStudy("B_AFTER");
+     }
+ 
+     @Test

@@ -1,0 +1,2 @@
+com.querydsl.hibernate.search.SearchQueryTest.exists
+com.querydsl.hibernate.search.SearchQueryTest.listResults
