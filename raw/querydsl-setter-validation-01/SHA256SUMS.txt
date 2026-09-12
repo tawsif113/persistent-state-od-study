@@ -1,0 +1,13 @@
+f2b4fb0a91013f503a06b2e243dc02a5291164602068d86bcaf8e777e80e8586  ./01-A-clean-after-state.txt
+d5b0f82ec4ee6fd6d6a8ff6c43e576fe8b6fc6e651fd8773714b26c04b64747e  ./01-A-clean-before-state.txt
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ./01-A-clean-exit-code.txt
+df73103ce1d72289eb8b029a5ca6deda9451acf150eb6f52b945df05d00a7850  ./01-A-clean.log
+4d3fa4b6e20f6cfc4713fb377e40b6ca098198d2a44d1476197e4069c4a10eec  ./02-B-after-A-reused-after-state.txt
+f2b4fb0a91013f503a06b2e243dc02a5291164602068d86bcaf8e777e80e8586  ./02-B-after-A-reused-before-state.txt
+4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865  ./02-B-after-A-reused-exit-code.txt
+f4a2feaade61a88134c475561b3159d2422ae00a12d89141d5aa90c89037b01e  ./02-B-after-A-reused.log
+f2b4fb0a91013f503a06b2e243dc02a5291164602068d86bcaf8e777e80e8586  ./03-B-after-reset-after-state.txt
+d5b0f82ec4ee6fd6d6a8ff6c43e576fe8b6fc6e651fd8773714b26c04b64747e  ./03-B-after-reset-before-state.txt
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  ./03-B-after-reset-exit-code.txt
+8e3ec80ad8b7dd1a35f30744cfeb6fc66e16198bbd42827bce309c0a610f234f  ./03-B-after-reset.log
+f90df5fac82b5559a951ad730ccdd5efe0716f02759886e4370111268675f9fb  ./metadata.txt

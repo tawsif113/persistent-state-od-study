@@ -1,0 +1,21 @@
+lucene_exists=true
+derby_exists=true
+lucene_files:
+indexes/com.querydsl.hibernate.search.User/_0.fdt 399 bytes
+indexes/com.querydsl.hibernate.search.User/_0.fdx 44 bytes
+indexes/com.querydsl.hibernate.search.User/_0.fnm 68 bytes
+indexes/com.querydsl.hibernate.search.User/_0.frq 30 bytes
+indexes/com.querydsl.hibernate.search.User/_0.nrm 24 bytes
+indexes/com.querydsl.hibernate.search.User/_0.prx 30 bytes
+indexes/com.querydsl.hibernate.search.User/_0.tii 35 bytes
+indexes/com.querydsl.hibernate.search.User/_0.tis 309 bytes
+indexes/com.querydsl.hibernate.search.User/_1.fdt 399 bytes
+indexes/com.querydsl.hibernate.search.User/_1.fdx 44 bytes
+indexes/com.querydsl.hibernate.search.User/_1.fnm 68 bytes
+indexes/com.querydsl.hibernate.search.User/_1.frq 30 bytes
+indexes/com.querydsl.hibernate.search.User/_1.nrm 24 bytes
+indexes/com.querydsl.hibernate.search.User/_1.prx 30 bytes
+indexes/com.querydsl.hibernate.search.User/_1.tii 35 bytes
+indexes/com.querydsl.hibernate.search.User/_1.tis 309 bytes
+indexes/com.querydsl.hibernate.search.User/segments_3 446 bytes
+indexes/com.querydsl.hibernate.search.User/segments.gen 20 bytes
