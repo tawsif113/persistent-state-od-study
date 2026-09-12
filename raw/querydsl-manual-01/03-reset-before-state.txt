@@ -1,0 +1,2 @@
+lucene_exists=false
+derby_exists=false

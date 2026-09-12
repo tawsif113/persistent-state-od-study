@@ -1,0 +1,154 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36mcom.querydsl:querydsl-hibernate-search[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Querydsl - Hibernate Search support 4.2.1[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4:enforce[m [1m(enforce-maven)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:2.15:check[m [1m(checkstyle)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:2.15:check[m [1m(checkstyle-main)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.7.5.201505241946:prepare-agent[m [1m(prepare-agent)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/kazi/.m2/repository/org/jacoco/org.jacoco.agent/0.7.5.201505241946/org.jacoco.agent-0.7.5.201505241946-runtime.jar=destfile=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-persistent-state/querydsl-hibernate-search/target/jacoco.exec -Xms256m -Xmx512m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-persistent-state/querydsl-hibernate-search/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:compile[m [1m(default-compile)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 4 source files to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-persistent-state/querydsl-hibernate-search/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:2.4.0:manifest[m [1m(bundle-manifest)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;33mWARNING[m] Manifest com.querydsl:querydsl-hibernate-search:jar:4.2.1 : Unused Import-Package instructions: [com.google.common.*] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:testCompile[m [1m(default-testCompile)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.18:test[m [1m(default-test)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit47/2.18/surefire-junit47-2.18.pom
+Progress (1): 4.1 kBProgress (1): 4.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit47/2.18/surefire-junit47-2.18.pom (4.3 kB at 7.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.18/surefire-providers-2.18.pom
+Progress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.18/surefire-providers-2.18.pom (2.4 kB at 2.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.pom
+Progress (1): 4.1 kBProgress (1): 5.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.pom (5.4 kB at 48 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit48/2.18/common-junit48-2.18.pom
+Progress (1): 3.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit48/2.18/common-junit48-2.18.pom (3.4 kB at 8.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/2.18/common-junit4-2.18.pom
+Progress (1): 2.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/2.18/common-junit4-2.18.pom (2.0 kB at 5.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/2.18/common-junit3-2.18.pom
+Progress (1): 1.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/2.18/common-junit3-2.18.pom (1.6 kB at 4.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.18/surefire-api-2.18.pom
+Progress (1): 2.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.18/surefire-api-2.18.pom (2.3 kB at 5.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.18/common-java5-2.18.pom
+Progress (1): 1.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.18/common-java5-2.18.pom (1.7 kB at 4.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/2.18/surefire-grouper-2.18.pom
+Progress (1): 2.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/2.18/surefire-grouper-2.18.pom (2.5 kB at 7.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.18/maven-surefire-common-2.18.pom
+Progress (1): 4.1 kBProgress (1): 6.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.18/maven-surefire-common-2.18.pom (6.3 kB at 24 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.18/surefire-booter-2.18.pom
+Progress (1): 2.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.18/surefire-booter-2.18.pom (2.8 kB at 6.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit47/2.18/surefire-junit47-2.18.jar
+Downloading from central: https://repo.maven.apache.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit48/2.18/common-junit48-2.18.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/2.18/common-junit3-2.18.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/2.18/common-junit4-2.18.jar
+Progress (1): 2.3/4.7 kBProgress (1): 4.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar (4.7 kB at 49 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/2.18/surefire-grouper-2.18.jar
+Progress (1): 2.3/19 kBProgress (1): 5.0/19 kBProgress (1): 7.7/19 kBProgress (1): 10/19 kB Progress (1): 13/19 kBProgress (1): 16/19 kBProgress (1): 19/19 kBProgress (1): 19 kB   Progress (2): 19 kB | 2.3/132 kBProgress (2): 19 kB | 6.4/132 kBProgress (2): 19 kB | 10/132 kB Progress (2): 19 kB | 15/132 kBProgress (2): 19 kB | 19/132 kBProgress (2): 19 kB | 23/132 kBProgress (2): 19 kB | 27/132 kBProgress (2): 19 kB | 31/132 kBProgress (2): 19 kB | 35/132 kBProgress (2): 19 kB | 39/132 kBProgress (2): 19 kB | 41/132 kBProgress (2): 19 kB | 45/132 kBProgress (2): 19 kB | 49/132 kBProgress (2): 19 kB | 53/132 kBProgress (2): 19 kB | 57/132 kBProgress (2): 19 kB | 61/132 kBProgress (2): 19 kB | 66/132 kBProgress (2): 19 kB | 70/132 kBProgress (2): 19 kB | 74/132 kBProgress (2): 19 kB | 78/132 kBProgress (2): 19 kB | 82/132 kBProgress (2): 19 kB | 86/132 kBProgress (2): 19 kB | 90/132 kBProgress (2): 19 kB | 94/132 kBProgress (2): 19 kB | 98/132 kBProgress (2): 19 kB | 102/132 kBProgress (2): 19 kB | 106/132 kBProgress (2): 19 kB | 111/132 kBProgress (2): 19 kB | 115/132 kBProgress (2): 19 kB | 119/132 kBProgress (2): 19 kB | 123/132 kBProgress (2): 19 kB | 127/132 kBProgress (2): 19 kB | 131/132 kBProgress (2): 19 kB | 132 kB    Progress (3): 19 kB | 132 kB | 2.3/11 kBProgress (4): 19 kB | 132 kB | 2.3/11 kB | 2.3/19 kBProgress (4): 19 kB | 132 kB | 2.3/11 kB | 5.0/19 kBProgress (4): 19 kB | 132 kB | 5.0/11 kB | 5.0/19 kBProgress (4): 19 kB | 132 kB | 5.0/11 kB | 7.7/19 kBProgress (4): 19 kB | 132 kB | 5.0/11 kB | 10/19 kB Progress (4): 19 kB | 132 kB | 7.7/11 kB | 10/19 kBProgress (4): 19 kB | 132 kB | 7.7/11 kB | 13/19 kBProgress (4): 19 kB | 132 kB | 7.7/11 kB | 16/19 kBProgress (4): 19 kB | 132 kB | 10/11 kB | 16/19 kB Progress (4): 19 kB | 132 kB | 10/11 kB | 19/19 kBProgress (4): 19 kB | 132 kB | 11 kB | 19/19 kB   Progress (4): 19 kB | 132 kB | 11 kB | 19 kB   Progress (5): 19 kB | 132 kB | 11 kB | 19 kB | 2.3/38 kBProgress (5): 19 kB | 132 kB | 11 kB | 19 kB | 5.0/38 kBProgress (5): 19 kB | 132 kB | 11 kB | 19 kB | 7.7/38 kBProgress (5): 19 kB | 132 kB | 11 kB | 19 kB | 10/38 kB Progress (5): 19 kB | 132 kB | 11 kB | 19 kB | 13/38 kBProgress (5): 19 kB | 132 kB | 11 kB | 19 kB | 16/38 kBProgress (5): 19 kB | 132 kB | 11 kB | 19 kB | 19/38 kBProgress (5): 19 kB | 132 kB | 11 kB | 19 kB | 21/38 kBProgress (5): 19 kB | 132 kB | 11 kB | 19 kB | 24/38 kBProgress (5): 19 kB | 132 kB | 11 kB | 19 kB | 27/38 kBProgress (5): 19 kB | 132 kB | 11 kB | 19 kB | 30/38 kBProgress (5): 19 kB | 132 kB | 11 kB | 19 kB | 32/38 kBProgress (5): 19 kB | 132 kB | 11 kB | 19 kB | 35/38 kB                                                       Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit48/2.18/common-junit48-2.18.jar (19 kB at 66 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.18/common-java5-2.18.jar
+Progress (4): 132 kB | 11 kB | 19 kB | 38/38 kBProgress (4): 132 kB | 11 kB | 19 kB | 38 kB                                               Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit3/2.18/common-junit3-2.18.jar (11 kB at 34 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.18/maven-surefire-common-2.18.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit47/2.18/surefire-junit47-2.18.jar (132 kB at 382 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.18/surefire-booter-2.18.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-junit4/2.18/common-junit4-2.18.jar (19 kB at 54 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.18/surefire-api-2.18.jar
+Progress (2): 38 kB | 2.3/37 kBProgress (2): 38 kB | 5.0/37 kBProgress (2): 38 kB | 7.7/37 kBProgress (2): 38 kB | 12/37 kB Progress (2): 38 kB | 16/37 kBProgress (2): 38 kB | 20/37 kBProgress (2): 38 kB | 24/37 kBProgress (2): 38 kB | 28/37 kBProgress (2): 38 kB | 32/37 kBProgress (2): 38 kB | 36/37 kBProgress (2): 38 kB | 37 kB                              Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/2.18/surefire-grouper-2.18.jar (38 kB at 94 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.3/maven-plugin-annotations-3.3.jar
+Progress (2): 37 kB | 2.3/274 kBProgress (2): 37 kB | 5.0/274 kBProgress (2): 37 kB | 7.7/274 kBProgress (2): 37 kB | 11/274 kB Progress (2): 37 kB | 14/274 kBProgress (2): 37 kB | 16/274 kBProgress (2): 37 kB | 19/274 kBProgress (2): 37 kB | 22/274 kBProgress (2): 37 kB | 25/274 kBProgress (2): 37 kB | 27/274 kBProgress (2): 37 kB | 30/274 kBProgress (2): 37 kB | 33/274 kBProgress (2): 37 kB | 37/274 kBProgress (2): 37 kB | 41/274 kBProgress (2): 37 kB | 45/274 kBProgress (2): 37 kB | 49/274 kBProgress (2): 37 kB | 53/274 kBProgress (2): 37 kB | 57/274 kBProgress (2): 37 kB | 61/274 kBProgress (2): 37 kB | 66/274 kBProgress (3): 37 kB | 66/274 kB | 3.8/40 kBProgress (3): 37 kB | 70/274 kB | 3.8/40 kBProgress (3): 37 kB | 70/274 kB | 7.8/40 kBProgress (3): 37 kB | 74/274 kB | 7.8/40 kBProgress (3): 37 kB | 74/274 kB | 11/40 kB Progress (3): 37 kB | 78/274 kB | 11/40 kBProgress (3): 37 kB | 78/274 kB | 15/40 kBProgress (3): 37 kB | 82/274 kB | 15/40 kBProgress (3): 37 kB | 86/274 kB | 15/40 kBProgress (3): 37 kB | 86/274 kB | 20/40 kBProgress (3): 37 kB | 86/274 kB | 24/40 kBProgress (3): 37 kB | 90/274 kB | 24/40 kBProgress (3): 37 kB | 94/274 kB | 24/40 kBProgress (3): 37 kB | 98/274 kB | 24/40 kBProgress (3): 37 kB | 102/274 kB | 24/40 kBProgress (3): 37 kB | 102/274 kB | 28/40 kBProgress (3): 37 kB | 106/274 kB | 28/40 kBProgress (3): 37 kB | 106/274 kB | 32/40 kBProgress (3): 37 kB | 111/274 kB | 32/40 kBProgress (3): 37 kB | 111/274 kB | 36/40 kBProgress (3): 37 kB | 111/274 kB | 40 kB   Progress (3): 37 kB | 115/274 kB | 40 kBProgress (3): 37 kB | 119/274 kB | 40 kBProgress (3): 37 kB | 123/274 kB | 40 kBProgress (3): 37 kB | 127/274 kB | 40 kBProgress (3): 37 kB | 131/274 kB | 40 kBProgress (3): 37 kB | 135/274 kB | 40 kBProgress (3): 37 kB | 139/274 kB | 40 kBProgress (3): 37 kB | 143/274 kB | 40 kBProgress (3): 37 kB | 147/274 kB | 40 kBProgress (3): 37 kB | 152/274 kB | 40 kBProgress (3): 37 kB | 156/274 kB | 40 kBProgress (3): 37 kB | 160/274 kB | 40 kBProgress (3): 37 kB | 164/274 kB | 40 kBProgress (3): 37 kB | 168/274 kB | 40 kBProgress (3): 37 kB | 172/274 kB | 40 kBProgress (3): 37 kB | 176/274 kB | 40 kBProgress (3): 37 kB | 180/274 kB | 40 kBProgress (3): 37 kB | 184/274 kB | 40 kBProgress (3): 37 kB | 188/274 kB | 40 kBProgress (3): 37 kB | 193/274 kB | 40 kBProgress (3): 37 kB | 197/274 kB | 40 kBProgress (3): 37 kB | 201/274 kB | 40 kBProgress (3): 37 kB | 205/274 kB | 40 kBProgress (3): 37 kB | 209/274 kB | 40 kBProgress (3): 37 kB | 213/274 kB | 40 kBProgress (3): 37 kB | 217/274 kB | 40 kBProgress (3): 37 kB | 221/274 kB | 40 kBProgress (3): 37 kB | 225/274 kB | 40 kBProgress (3): 37 kB | 229/274 kB | 40 kBProgress (3): 37 kB | 233/274 kB | 40 kBProgress (3): 37 kB | 238/274 kB | 40 kBProgress (3): 37 kB | 242/274 kB | 40 kBProgress (3): 37 kB | 246/274 kB | 40 kBProgress (3): 37 kB | 250/274 kB | 40 kBProgress (3): 37 kB | 254/274 kB | 40 kBProgress (3): 37 kB | 258/274 kB | 40 kBProgress (3): 37 kB | 262/274 kB | 40 kBProgress (3): 37 kB | 266/274 kB | 40 kBProgress (3): 37 kB | 270/274 kB | 40 kBProgress (3): 37 kB | 274 kB | 40 kB    Progress (4): 37 kB | 274 kB | 40 kB | 2.7/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 5.5/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 8.2/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 11/148 kB Progress (4): 37 kB | 274 kB | 40 kB | 14/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 16/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 19/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 22/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 25/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 27/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 30/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 33/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 36/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 38/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 41/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 45/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 49/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 53/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 57/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 61/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 66/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 70/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 74/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 78/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 82/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 86/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 90/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 94/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 98/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 102/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 106/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 111/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 115/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 119/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 123/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 127/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 131/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 135/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 139/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 143/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 147/148 kBProgress (4): 37 kB | 274 kB | 40 kB | 148 kB                                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.18/common-java5-2.18.jar (37 kB at 77 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.18/surefire-booter-2.18.jar (40 kB at 73 kB/s)
+Progress (3): 274 kB | 148 kB | 2.3/14 kBProgress (3): 274 kB | 148 kB | 5.0/14 kBProgress (3): 274 kB | 148 kB | 7.7/14 kBProgress (3): 274 kB | 148 kB | 11/14 kB Progress (3): 274 kB | 148 kB | 14/14 kBProgress (3): 274 kB | 148 kB | 14 kB                                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.18/maven-surefire-common-2.18.jar (274 kB at 464 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.18/surefire-api-2.18.jar (148 kB at 231 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.3/maven-plugin-annotations-3.3.jar (14 kB at 21 kB/s)
+[[1;34mINFO[m] Surefire report directory: /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-persistent-state/querydsl-hibernate-search/target/surefire-reports
+[[1;34mINFO[m] Using configured provider org.apache.maven.surefire.junitcore.JUnitCoreProvider
+[[1;34mINFO[m] parallel='none', perCoreThreadCount=true, threadCount=0, useUnlimitedThreads=false, threadCountSuites=0, threadCountClasses=0, threadCountMethods=0, parallelOptimized=true
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Sep 12, 2026 6:52:06 PM org.hibernate.annotations.common.Version <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+Sep 12, 2026 6:52:06 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.1.7.Final}
+Sep 12, 2026 6:52:06 PM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Sep 12, 2026 6:52:06 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Sep 12, 2026 6:52:06 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Sep 12, 2026 6:52:06 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 0
+Sep 12, 2026 6:52:06 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: false
+Sep 12, 2026 6:52:06 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [org.apache.derby.jdbc.EmbeddedDriver] at URL [jdbc:derby:target/derbydb;create=true]
+Sep 12, 2026 6:52:06 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {}
+Sep 12, 2026 6:52:07 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+Sep 12, 2026 6:52:07 PM org.hibernate.dialect.DerbyDialect <init>
+WARN: HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+Sep 12, 2026 6:52:07 PM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+Sep 12, 2026 6:52:07 PM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Sep 12, 2026 6:52:07 PM org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 4.3.0.Final
+Sep 12, 2026 6:52:07 PM org.hibernate.search.Version <clinit>
+INFO: HSEARCH000034: Hibernate Search 4.2.0.Final
+Sep 12, 2026 6:52:07 PM org.hibernate.search.impl.ConfigContext getLuceneMatchVersion
+WARN: HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+Sep 12, 2026 6:52:07 PM org.hibernate.search.store.impl.DirectoryProviderHelper makeSanityCheckedDirectory
+INFO: HSEARCH000041: Index directory not found, creating: '/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-persistent-state/querydsl-hibernate-search/target/lucene/indexes'
+Sep 12, 2026 6:52:07 PM org.hibernate.search.store.impl.DirectoryProviderHelper makeSanityCheckedDirectory
+INFO: HSEARCH000041: Index directory not found, creating: '/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-persistent-state/querydsl-hibernate-search/target/lucene/indexes/com.querydsl.hibernate.search.User'
+Sep 12, 2026 6:52:07 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000228: Running hbm2ddl schema update
+Sep 12, 2026 6:52:07 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000102: Fetching database metadata
+Sep 12, 2026 6:52:07 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000396: Updating schema
+Sep 12, 2026 6:52:07 PM org.hibernate.tool.hbm2ddl.DatabaseMetadata getTableMetadata
+INFO: HHH000262: Table not found: user_
+Sep 12, 2026 6:52:07 PM org.hibernate.tool.hbm2ddl.DatabaseMetadata getTableMetadata
+INFO: HHH000262: Table not found: user_
+Sep 12, 2026 6:52:07 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000232: Schema update complete
+Running com.querydsl.hibernate.search.SearchQueryTest
+Sep 12, 2026 6:52:08 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl stop
+INFO: HHH000030: Cleaning up connection pool [jdbc:derby:target/derbydb;create=true]
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.339 sec - in com.querydsl.hibernate.search.SearchQueryTest
+
+Results :
+
+
+
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32manimal-sniffer-maven-plugin:1.14:check[m [1m(ensure-java-1.6-class-library)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Checking unresolved references to org.codehaus.mojo.signature:java16:1.1
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  9.705 s
+[[1;34mINFO[m] Finished at: 2026-09-12T18:52:08+06:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
