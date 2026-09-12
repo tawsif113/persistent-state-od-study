@@ -1,0 +1,11 @@
+study_revision=5fd6d1bb89dd385f9cf83297e7fa02e6c397641e
+project_base_revision=2bf234caf78549813a1e0f44d9c30ecc5ef734e3
+project_harness_revision=4f6c1074d75d93936f1607ac2ff1f64aa3ce8e0d
+patch_sha256=b326a7bd616838ff6d4f3dd704fce102932175f0bf219b1b99767083b75c42ad
+order_sha256=103675e39b61b3fe7e4ec0a0f46107ccf4fc7f8494dd67b7aaf157258d1ed1dc
+idflakies_sha256=9c2056143ea8961ba39d3ca147fa076e0a8dcb388e449cfec0cc0f6918ce192b
+testrunner_sha256=55e4be10bb2b528e39adee34ee806971ff934469a4977bcf39fecd3ad414b321
+persistent_state=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-idflakies/querydsl-hibernate-search/target/lucene
+dtfixingtools=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-idflakies/querydsl-hibernate-search/.dtfixingtools
+java=openjdk version "1.8.0_504"
+maven=[1mApache Maven 3.8.7[m

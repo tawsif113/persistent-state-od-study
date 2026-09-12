@@ -1,0 +1,8 @@
+protocol=reused
+lucene_exists_initial=false
+derby_exists_initial=false
+order_sha256=103675e39b61b3fe7e4ec0a0f46107ccf4fc7f8494dd67b7aaf157258d1ed1dc
+trace=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/persistent-state-od-study/raw/querydsl-idflakies-01/reused/trace.csv
+
+com.querydsl.hibernate.search.SearchQueryTest.exists
+com.querydsl.hibernate.search.SearchQueryTest.listResults

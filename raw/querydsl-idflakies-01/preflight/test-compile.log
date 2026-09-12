@@ -1,0 +1,38 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36mcom.querydsl:querydsl-hibernate-search[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Querydsl - Hibernate Search support 4.2.1[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4:enforce[m [1m(enforce-maven)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:2.15:check[m [1m(checkstyle)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:2.15:check[m [1m(checkstyle-main)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.7.5.201505241946:prepare-agent[m [1m(prepare-agent)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/kazi/.m2/repository/org/jacoco/org.jacoco.agent/0.7.5.201505241946/org.jacoco.agent-0.7.5.201505241946-runtime.jar=destfile=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-idflakies/querydsl-hibernate-search/target/jacoco.exec -Xms256m -Xmx512m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-idflakies/querydsl-hibernate-search/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:compile[m [1m(default-compile)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 4 source files to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-idflakies/querydsl-hibernate-search/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:2.4.0:manifest[m [1m(bundle-manifest)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;33mWARNING[m] Manifest com.querydsl:querydsl-hibernate-search:jar:4.2.1 : Unused Import-Package instructions: [com.google.common.*] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:testCompile[m [1m(default-testCompile)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  1.476 s
+[[1;34mINFO[m] Finished at: 2026-09-13T00:01:46+06:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

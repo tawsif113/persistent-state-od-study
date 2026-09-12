@@ -1,0 +1,50 @@
+Sep 13, 2026 12:01:58 AM org.hibernate.annotations.common.Version <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+Sep 13, 2026 12:01:58 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.1.7.Final}
+Sep 13, 2026 12:01:58 AM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Sep 13, 2026 12:01:58 AM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Sep 13, 2026 12:01:58 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Sep 13, 2026 12:01:58 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 0
+Sep 13, 2026 12:01:58 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: false
+Sep 13, 2026 12:01:58 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [org.apache.derby.jdbc.EmbeddedDriver] at URL [jdbc:derby:target/derbydb;create=true]
+Sep 13, 2026 12:01:58 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {}
+Sep 13, 2026 12:01:59 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+Sep 13, 2026 12:01:59 AM org.hibernate.dialect.DerbyDialect <init>
+WARN: HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+Sep 13, 2026 12:01:59 AM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+Sep 13, 2026 12:01:59 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Sep 13, 2026 12:01:59 AM org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 4.3.0.Final
+Sep 13, 2026 12:01:59 AM org.hibernate.search.Version <clinit>
+INFO: HSEARCH000034: Hibernate Search 4.2.0.Final
+Sep 13, 2026 12:01:59 AM org.hibernate.search.impl.ConfigContext getLuceneMatchVersion
+WARN: HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+Sep 13, 2026 12:01:59 AM org.hibernate.search.store.impl.DirectoryProviderHelper makeSanityCheckedDirectory
+INFO: HSEARCH000041: Index directory not found, creating: '/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-idflakies/querydsl-hibernate-search/target/lucene/indexes'
+Sep 13, 2026 12:01:59 AM org.hibernate.search.store.impl.DirectoryProviderHelper makeSanityCheckedDirectory
+INFO: HSEARCH000041: Index directory not found, creating: '/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-idflakies/querydsl-hibernate-search/target/lucene/indexes/com.querydsl.hibernate.search.User'
+Sep 13, 2026 12:01:59 AM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000228: Running hbm2ddl schema update
+Sep 13, 2026 12:01:59 AM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000102: Fetching database metadata
+Sep 13, 2026 12:01:59 AM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000396: Updating schema
+Sep 13, 2026 12:01:59 AM org.hibernate.tool.hbm2ddl.DatabaseMetadata getTableMetadata
+INFO: HHH000262: Table not found: user_
+Sep 13, 2026 12:01:59 AM org.hibernate.tool.hbm2ddl.DatabaseMetadata getTableMetadata
+INFO: HHH000262: Table not found: user_
+Sep 13, 2026 12:01:59 AM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000232: Schema update complete
+Sep 13, 2026 12:01:59 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl stop
+INFO: HHH000030: Cleaning up connection pool [jdbc:derby:target/derbydb;create=true]
