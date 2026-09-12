@@ -1,0 +1,3 @@
+execution_id,position,label,method
+01,1,A,com.querydsl.hibernate.search.SearchQueryTest#exists
+02,1,B,com.querydsl.hibernate.search.SearchQueryTest#listResults

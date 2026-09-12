@@ -1,0 +1,26 @@
+case_id=querydsl-case-03
+repository=https://github.com/querydsl/querydsl
+revision=2bf234caf78549813a1e0f44d9c30ecc5ef734e3
+module=querydsl-hibernate-search
+
+A=com.querydsl.hibernate.search.SearchQueryTest#exists
+B=com.querydsl.hibernate.search.SearchQueryTest#listResults
+
+B_idoft_category=NOD;OD-Brit
+B_idoft_status=Accepted
+idoft_pr=https://github.com/querydsl/querydsl/pull/2658
+
+persistent_state=target/lucene
+historical_incorrect_cleanup=target/lucene3
+derby_state=target/derbydb
+derby_cleanup=historically_correct
+
+state_setter_basis=manually_validated
+rankf_ground_truth_for_querydsl=not_present_in_local_artifact
+
+protocol_clean=reset persistent state before every execution
+protocol_reused=reset once before protocol and preserve state across executions
+
+execution_model=separate Maven/JVM invocation per test
+jdk=Temurin 1.8.0_504
+maven=3.8.7
