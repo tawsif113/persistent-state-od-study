@@ -1,0 +1,150 @@
+HSAC FitNesse Fixtures real IDoFT case — iDFlakies persistent-state detector result
+
+Project:
+https://github.com/fhoeben/hsac-fitnesse-fixtures
+
+Historical project revision:
+a64c18d9c4bac8271275c7b089d40be20f0604b5
+
+Detector harness revision:
+2d6c7d64095dbda8713a3d8ae314584dd52b3ade
+
+Study runner checkpoint:
+b9c40e48e72a48cc17a89035e49b1fc9b93273ba
+
+Raw evidence checkpoint:
+77a99710a9b68ef1b910ca58715dd068951ce4dc
+
+iDFlakies:
+edu.illinois.cs:idflakies:1.1.0
+
+iDFlakies SHA256:
+9c2056143ea8961ba39d3ca147fa076e0a8dcb388e449cfec0cc0f6918ce192b
+
+testrunner Maven plugin:
+edu.illinois.cs:testrunner-maven-plugin:1.2
+
+testrunner Maven plugin SHA256:
+55e4be10bb2b528e39adee34ee806971ff934469a4977bcf39fecd3ad414b321
+
+Environment:
+OpenJDK 11.0.32
+Apache Maven 3.8.7
+
+A / state-setter:
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testCopyTo
+
+B / brittle:
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testDelete
+
+Persistent filesystem resource:
+src/test/resources/temp-copy.txt
+
+Seeded original order:
+A -> B
+
+Order SHA256:
+6250d7c2186433c5ac749aaa4383f362a715e9f6106fb44bdc54e2db3c22afb7
+
+Both protocols began with temp-copy.txt absent and used the same seeded
+original test order.
+
+CLEAN PROTOCOL
+
+Initial original execution:
+A -> B
+
+Trace:
+- order starts with temp-copy.txt absent
+- A sees ABSENT
+- A creates temp-copy.txt
+- B sees PRESENT
+- B passes and deletes temp-copy.txt
+- execution ends with temp-copy.txt absent
+
+Revealing/reverse execution:
+- starts with temp-copy.txt absent
+- B executes before its state-setter
+- B errors
+- A then creates temp-copy.txt
+
+iDFlakies result:
+- testDelete detected as order-dependent
+- intended result: PASS when preceded by testCopyTo
+- revealed result: ERROR without testCopyTo
+
+REUSED PROTOCOL
+
+Initial original execution:
+A -> B
+
+Trace:
+- order starts with temp-copy.txt absent
+- A sees ABSENT
+- A creates temp-copy.txt
+- B sees PRESENT
+- B passes and deletes temp-copy.txt
+- execution ends with temp-copy.txt absent
+
+Revealing/reverse execution:
+- starts with temp-copy.txt absent even though no reset is performed
+- B executes before its state-setter
+- B errors
+- A then creates temp-copy.txt
+
+iDFlakies result:
+- testDelete detected as order-dependent
+- intended result: PASS when preceded by testCopyTo
+- revealed result: ERROR without testCopyTo
+
+PROTOCOL VALIDATION
+
+The reused-state mechanism did preserve cross-JVM filesystem state when that
+state survived an execution.
+
+During a later verification execution, the reused trace records:
+
+ORDER_START_PRE_RESET=true
+ORDER_START_POST_RESET=true
+
+At the corresponding clean execution, the trace records:
+
+ORDER_START_PRE_RESET=true
+ORDER_START_POST_RESET=false
+
+Therefore the absence of a detector difference is not caused by failure of
+the reused-state protocol.
+
+RESULT
+
+Clean:
+testDelete detected
+
+Reused:
+testDelete detected
+
+Detector reporting changed:
+NO
+
+The reason differs from the Silverpeas case.
+
+In HSAC, testDelete consumes the relevant persistent state when it succeeds:
+testCopyTo creates temp-copy.txt and testDelete deletes it. Therefore the
+original A -> B execution leaves temp-copy.txt absent. The subsequent
+revealing/reverse execution consequently begins with the relevant state absent
+under both clean and reused protocols.
+
+Persistent-state outcome sensitivity and detector-reporting sensitivity are
+therefore distinct in this case.
+
+The separately matched HSAC experiment established that cross-execution
+filesystem persistence can change testDelete's outcome when A and B execute in
+separate executions without B first consuming the state.
+
+This iDFlakies experiment establishes that the same persistent-state mechanism
+does not alter reverse-detector reporting when the detector's original A -> B
+execution consumes that state before the next detector execution.
+
+This is a contrast case demonstrating that the effect of persistent state on
+OD detection depends on the lifetime of the state relative to the detector's
+execution schedule. It does not establish prevalence across IDoFT.
