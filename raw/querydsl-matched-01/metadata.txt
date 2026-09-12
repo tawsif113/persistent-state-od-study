@@ -1,0 +1,15 @@
+project_revision=2bf234caf78549813a1e0f44d9c30ecc5ef734e3
+order_file=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/persistent-state-od-study/orders/querydsl-case-03-orders.csv
+order_sha256=9896baedac733ae1cde565b6afb5693cacfc7ec7929f812dee9f8204ec40199f
+A=com.querydsl.hibernate.search.SearchQueryTest#exists
+B=com.querydsl.hibernate.search.SearchQueryTest#listResults
+execution_model=separate_Maven_invocation_per_test
+
+openjdk version "1.8.0_504"
+OpenJDK Runtime Environment (Temurin)(build 1.8.0_504-b01)
+OpenJDK 64-Bit Server VM (Temurin)(build 25.504-b01, mixed mode)
+[1mApache Maven 3.8.7[m
+Maven home: /usr/share/maven
+Java version: 1.8.0_504, vendor: Temurin, runtime: /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/toolchains/temurin8/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-30-generic", arch: "amd64", family: "unix"

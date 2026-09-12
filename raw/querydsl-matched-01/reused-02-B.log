@@ -1,0 +1,123 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36mcom.querydsl:querydsl-hibernate-search[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding Querydsl - Hibernate Search support 4.2.1[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4:enforce[m [1m(enforce-maven)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:2.15:check[m [1m(checkstyle)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:2.15:check[m [1m(checkstyle-main)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.7.5.201505241946:prepare-agent[m [1m(prepare-agent)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/kazi/.m2/repository/org/jacoco/org.jacoco.agent/0.7.5.201505241946/org.jacoco.agent-0.7.5.201505241946-runtime.jar=destfile=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-persistent-state/querydsl-hibernate-search/target/jacoco.exec -Xms256m -Xmx512m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-persistent-state/querydsl-hibernate-search/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:compile[m [1m(default-compile)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 4 source files to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-persistent-state/querydsl-hibernate-search/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:2.4.0:manifest[m [1m(bundle-manifest)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;33mWARNING[m] Manifest com.querydsl:querydsl-hibernate-search:jar:4.2.1 : Unused Import-Package instructions: [com.google.common.*] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.3:testCompile[m [1m(default-testCompile)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.18:test[m [1m(default-test)[m @ [36mquerydsl-hibernate-search[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-persistent-state/querydsl-hibernate-search/target/surefire-reports
+[[1;34mINFO[m] Using configured provider org.apache.maven.surefire.junitcore.JUnitCoreProvider
+[[1;34mINFO[m] parallel='none', perCoreThreadCount=true, threadCount=0, useUnlimitedThreads=false, threadCountSuites=0, threadCountClasses=0, threadCountMethods=0, parallelOptimized=true
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Sep 12, 2026 10:25:11 PM org.hibernate.annotations.common.Version <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+Sep 12, 2026 10:25:11 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.1.7.Final}
+Sep 12, 2026 10:25:11 PM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Sep 12, 2026 10:25:11 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Sep 12, 2026 10:25:11 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Sep 12, 2026 10:25:11 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 0
+Sep 12, 2026 10:25:11 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: false
+Sep 12, 2026 10:25:11 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [org.apache.derby.jdbc.EmbeddedDriver] at URL [jdbc:derby:target/derbydb;create=true]
+Sep 12, 2026 10:25:11 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {}
+Sep 12, 2026 10:25:12 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
+Sep 12, 2026 10:25:12 PM org.hibernate.dialect.DerbyDialect <init>
+WARN: HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
+Sep 12, 2026 10:25:12 PM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+Sep 12, 2026 10:25:12 PM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Sep 12, 2026 10:25:12 PM org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 4.3.0.Final
+Sep 12, 2026 10:25:12 PM org.hibernate.search.Version <clinit>
+INFO: HSEARCH000034: Hibernate Search 4.2.0.Final
+Sep 12, 2026 10:25:12 PM org.hibernate.search.impl.ConfigContext getLuceneMatchVersion
+WARN: HSEARCH000075: Configuration setting hibernate.search.lucene_version was not specified, using LUCENE_CURRENT.
+Sep 12, 2026 10:25:12 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000228: Running hbm2ddl schema update
+Sep 12, 2026 10:25:12 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000102: Fetching database metadata
+Sep 12, 2026 10:25:12 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000396: Updating schema
+Sep 12, 2026 10:25:12 PM org.hibernate.tool.hbm2ddl.DatabaseMetadata getTableMetadata
+INFO: HHH000262: Table not found: user_
+Sep 12, 2026 10:25:12 PM org.hibernate.tool.hbm2ddl.DatabaseMetadata getTableMetadata
+INFO: HHH000262: Table not found: user_
+Sep 12, 2026 10:25:12 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000232: Schema update complete
+Running com.querydsl.hibernate.search.SearchQueryTest
+Sep 12, 2026 10:25:13 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl stop
+INFO: HHH000030: Cleaning up connection pool [jdbc:derby:target/derbydb;create=true]
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.335 sec <<< FAILURE! - in com.querydsl.hibernate.search.SearchQueryTest
+listResults(com.querydsl.hibernate.search.SearchQueryTest)  Time elapsed: 0.334 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<[Anton, Barbara]> but was:<[Anton, Anton]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.querydsl.hibernate.search.SearchQueryTest.listResults(SearchQueryTest.java:137)
+
+
+Results :
+
+Failed tests: 
+  SearchQueryTest.listResults:137 expected:<[Anton, Barbara]> but was:<[Anton, Anton]>
+
+
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  4.040 s
+[[1;34mINFO[m] Finished at: 2026-09-12T22:25:13+06:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.18:test[m [1m(default-test)[m on project [36mquerydsl-hibernate-search[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/querydsl-persistent-state/querydsl-hibernate-search/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
