@@ -1,0 +1,68 @@
+Querydsl persistent-state case #3
+
+Repository:
+https://github.com/querydsl/querydsl
+
+Revision:
+2bf234caf78549813a1e0f44d9c30ecc5ef734e3
+
+Module:
+querydsl-hibernate-search
+
+A / manually validated state-setter:
+com.querydsl.hibernate.search.SearchQueryTest#exists
+
+B / brittle test:
+com.querydsl.hibernate.search.SearchQueryTest#listResults
+
+IDoFT classification for B:
+NOD;OD-Brit
+Accepted
+
+Persistent process-external state:
+querydsl-hibernate-search/target/lucene
+
+Historical cleanup behavior:
+- target/derbydb is deleted correctly before class initialization.
+- target/lucene3 is deleted.
+- the actual Hibernate Search index is target/lucene, so it survives across executions.
+
+Fixed matched execution sequence under both protocols:
+1. A = SearchQueryTest#exists
+2. B = SearchQueryTest#listResults
+
+Order SHA256:
+9896baedac733ae1cde565b6afb5693cacfc7ec7929f812dee9f8204ec40199f
+
+Clean-state protocol:
+- reset Lucene and Derby state before every execution
+- A: PASS
+- B: PASS
+- B begins with target/lucene absent
+
+Reused-state protocol:
+- reset once before protocol
+- allow A-created filesystem state to persist into B
+- A: PASS
+- B: FAIL
+- B begins with target/lucene present
+
+Observed reused-state B failure:
+expected:<[Anton, Barbara]> but was:<[Anton, Anton]>
+
+Interpretation:
+Under the identical A -> B execution sequence, B passes when persistent
+filesystem state is reset between executions but fails when the Lucene index
+created during A is allowed to persist into a separate Maven/JVM execution of B.
+
+The observed failure is causally linked to the reused filesystem-backed Lucene
+index: resetting the state restores B's passing result.
+
+Important qualifications:
+- SearchQueryTest#listResults is classified by IDoFT as both NOD and OD-Brit.
+- A was manually validated as a state-setter for this persistent-state mechanism;
+  it is not RankF-provided ground truth.
+- Querydsl is not present as a BSS case in the local RankF artifact, so no
+  historical RankF state-setter rank is claimed for this case.
+- This result establishes a persistent-state effect for this case; it does not
+  by itself establish prevalence across IDoFT.
