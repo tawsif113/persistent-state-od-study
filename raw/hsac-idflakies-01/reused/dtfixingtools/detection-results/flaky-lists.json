@@ -1,0 +1,1 @@
+{"dts":[{"name":"nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testDelete","intended":{"order":["nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testCopyTo"],"result":"PASS","testRunId":"1789198448763-69d9d74e-731a-4f2b-8196-20eb4e758872"},"revealed":{"order":[],"result":"ERROR","testRunId":"1789198449238-5984ca8d-4a40-4b90-81f2-c26bbaa6cfa9"}}]}

@@ -1,0 +1,8 @@
+study_revision=b9c40e48e72a48cc17a89035e49b1fc9b93273ba
+project_base_revision=a64c18d9c4bac8271275c7b089d40be20f0604b5
+project_harness_revision=2d6c7d64095dbda8713a3d8ae314584dd52b3ade
+patch_sha256=eb4ad225f20e66bcc98a0d7e4dcca8e89953996684e39fe83cc83dc197b5a67e
+order_sha256=6250d7c2186433c5ac749aaa4383f362a715e9f6106fb44bdc54e2db3c22afb7
+persistent_resource=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/hsac-fitnesse-fixtures-idflakies/src/test/resources/temp-copy.txt
+java=openjdk version "11.0.32" 2026-07-21
+maven=[1mApache Maven 3.8.7[m

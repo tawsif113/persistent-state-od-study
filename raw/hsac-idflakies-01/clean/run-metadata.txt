@@ -1,0 +1,7 @@
+protocol=clean
+state_exists_initial=false
+order_sha256=6250d7c2186433c5ac749aaa4383f362a715e9f6106fb44bdc54e2db3c22afb7
+trace=/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/persistent-state-od-study/raw/hsac-idflakies-01/clean/trace.csv
+
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testCopyTo
+nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testDelete

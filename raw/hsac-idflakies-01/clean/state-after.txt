@@ -1,0 +1,9 @@
+exists=true
+  File: /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/hsac-fitnesse-fixtures-idflakies/src/test/resources/temp-copy.txt
+  Size: 65        	Blocks: 8          IO Block: 4096   regular file
+Device: 259,4	Inode: 2633132     Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1001/    kazi)   Gid: ( 1001/    kazi)
+Access: 2026-09-12 13:34:05.605179993 +0600
+Modify: 2026-09-12 13:34:05.605899446 +0600
+Change: 2026-09-12 13:34:05.605899446 +0600
+ Birth: 2026-09-12 13:34:05.605179993 +0600

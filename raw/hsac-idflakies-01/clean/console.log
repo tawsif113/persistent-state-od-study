@@ -1,0 +1,177 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36mnl.hsac:hsac-fitnesse-fixtures[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding HSAC's FitNesse Fixtures 3.30.3-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mtestrunner-maven-plugin:1.2:testplugin[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36mhsac-fitnesse-fixtures[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mwebdriverextensions-maven-plugin:3.1.2:install-drivers[m [1m(default)[m @ [36mhsac-fitnesse-fixtures[0;1m ---[m
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/home/kazi/.m2/repository/cglib/cglib-nodep/2.2/cglib-nodep-2.2.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Installation directory "/home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/hsac-fitnesse-fixtures-idflakies/wiki/webdrivers"
+[[1;34mINFO[m] Installing drivers from configuration
+[[1;34mINFO[m] internetexplorerdriver-windows-32bit version 3.14.0
+[[1;34mINFO[m]   Already installed
+[[1;34mINFO[m] edgedriver-windows-64bit version 6.17134
+[[1;34mINFO[m]   Already installed
+[[1;34mINFO[m] chromedriver-windows-32bit version 2.44.0
+[[1;34mINFO[m]   Already installed
+[[1;34mINFO[m] chromedriver-mac-64bit version 2.44.0
+[[1;34mINFO[m]   Already installed
+[[1;34mINFO[m] chromedriver-linux-64bit version 2.44.0
+[[1;34mINFO[m]   Already installed
+[[1;34mINFO[m] geckodriver-windows-64bit version 0.23.0
+[[1;34mINFO[m]   Already installed
+[[1;34mINFO[m] geckodriver-mac-64bit version 0.23.0
+[[1;34mINFO[m]   Already installed
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.0.0:copy[m [1m(copy-fitnesse-standalone)[m @ [36mhsac-fitnesse-fixtures[0;1m ---[m
+[[1;34mINFO[m] Configured Artifact: org.fitnesse:fitnesse:standalone:?:jar
+[[1;34mINFO[m] Copying fitnesse-20180127-standalone.jar to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/hsac-fitnesse-fixtures-idflakies/wiki/fitnesse-standalone.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:3.0.0:copy[m [1m(copy-plugins)[m @ [36mhsac-fitnesse-fixtures[0;1m ---[m
+[[1;34mINFO[m] Configured Artifact: nl.hsac:hsac-fitnesse-plugin:1.24.0:jar
+[[1;34mINFO[m] Configured Artifact: org.fitnesse.plugins:maven-classpath-plugin:jar-with-dependencies:1.9:jar
+[[1;34mINFO[m] Copying hsac-fitnesse-plugin-1.24.0.jar to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/hsac-fitnesse-fixtures-idflakies/wiki/plugins/hsac-fitnesse-plugin-1.24.0.jar
+[[1;34mINFO[m] Copying maven-classpath-plugin-1.9-jar-with-dependencies.jar to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/hsac-fitnesse-fixtures-idflakies/wiki/plugins/maven-classpath-plugin-1.9-jar-with-dependencies.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mhsac-fitnesse-fixtures[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 6 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.6.1:compile[m [1m(default-compile)[m @ [36mhsac-fitnesse-fixtures[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mhsac-fitnesse-fixtures[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 57 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.6.1:testCompile[m [1m(default-testCompile)[m @ [36mhsac-fitnesse-fixtures[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-failsafe-plugin:2.22.1:integration-test[m [1m(generate-suite)[m @ [36mhsac-fitnesse-fixtures[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+Sep 12, 2026 1:34:02 PM fitnesse.plugins.PropertyBasedPluginFeatureFactory$2 register
+INFO: Loaded SymbolType fitnesse.wikitext.widgets.MavenClasspathSymbolType
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.MonthsFromToday
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.YearsFromToday
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.WeekDaysFromToday
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.DayOfWeek$Monday
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.DayOfWeek$Tuesday
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.DayOfWeek$Wednesday
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.DayOfWeek$Thursday
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.DayOfWeek$Friday
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.DayOfWeek$Saturday
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.DayOfWeek$Sunday
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.LastDayOfMonth
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.RandomInt
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.RandomString
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.RandomBsn
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.RandomEmail
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.RandomIban
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.RandomPostalCode
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.RandomDutchLicensePlate
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.DefineDefault
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.DefineFromProperties
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added symbol class nl.hsac.fitnesse.symbols.DefineDefaultFromProperties
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added Slim table type: table template: nl.hsac.fitnesse.slim.AutoArgScenarioTable
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory add
+INFO: Added Slim table type: storyboard: nl.hsac.fitnesse.slim.StoryboardTable
+Sep 12, 2026 1:34:02 PM nl.hsac.fitnesse.HsacPluginFeatureFactory registerSlimCoverageIfPossible
+INFO: Registered test system slimcoverage
+2026-09-12 13:34:02.234 testRun Started ('1' tests)
+slim:in-process
+
+[[1;34mINFO[m] Running nl.hsac.fitnesse.fixture.[1mFixtureDebugTest[m
+2026-09-12 13:34:02.269 testSuite Started 'nl.hsac.fitnesse.fixture.FixtureDebugTest'
+2026-09-12 13:34:02.269 test Started 'HsacExamples.SlimTests.UtilityFixtures.GeneratedSymbolicLinkSuite.SuiteSetUp' (0 / 1)
+2026-09-12 13:34:02.337 test Finished 'HsacExamples.SlimTests.UtilityFixtures.GeneratedSymbolicLinkSuite.SuiteSetUp'
+
+2026-09-12 13:34:02.337 test Started 'HsacExamples.SlimTests.UtilityFixtures.GeneratedSymbolicLinkSuite.SuiteGenerator' (1 / 1)
+2026-09-12 13:34:02.408 test Finished 'HsacExamples.SlimTests.UtilityFixtures.GeneratedSymbolicLinkSuite.SuiteGenerator'
+
+2026-09-12 13:34:02.408 test Started 'HsacExamples.SlimTests.UtilityFixtures.GeneratedSymbolicLinkSuite.SuiteTearDown' (1 / 1)
+2026-09-12 13:34:02.416 test Finished 'HsacExamples.SlimTests.UtilityFixtures.GeneratedSymbolicLinkSuite.SuiteTearDown'
+
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.15 s - in nl.hsac.fitnesse.fixture.[1mFixtureDebugTest[m
+2026-09-12 13:34:02.419 testSuite Finished 'nl.hsac.fitnesse.fixture.FixtureDebugTest'
+
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 3, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mtestrunner-maven-plugin:1.2:testplugin[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36mhsac-fitnesse-fixtures[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtestrunner-maven-plugin:1.2:testplugin[m [1m(default-cli)[m @ [36mhsac-fitnesse-fixtures[0;1m ---[m
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] No timeout specified. Using randomize.rounds: 20
+[[1;34mINFO[m] ROUNDS_CALCULATED: Giving nl.hsac:hsac-fitnesse-fixtures:3.30.3-SNAPSHOT 20 rounds to run for reverse
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[INFO] Getting original results (2 tests).
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Created dependent test detector (class edu.illinois.cs.dt.tools.detection.detectors.ReverseDetector).
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+Verified nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testDelete, status: expected PASS, got PASS
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+Verified nl.hsac.fitnesse.fixture.slim.FileFixtureTest.testDelete, status: expected ERROR, got ERROR
+[INFO] Found 1 tests in round 1 of 1 (0.0 seconds elapsed (1.4 total), 0.0 seconds remaining).
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[[1;34mINFO[m] Accessing cachePath: 
+[INFO] Found 0 tests in round 1 of 1 (0.0 seconds elapsed (1.8 total), 0.0 seconds remaining).
+
+[INFO] Found 1 tests, writing list to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/hsac-fitnesse-fixtures-idflakies/.dtfixingtools/detection-results/list.txt and dt lists to /home/kazi/Desktop/projects/phd/shanto-UT-DALLAS/hsac-fitnesse-fixtures-idflakies/.dtfixingtools/detection-results/flaky-lists.json
+TRY_COPY_ALL_FAILING_TEST_OUTPUT
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  4.966 s
+[[1;34mINFO[m] Finished at: 2026-09-12T13:34:05+06:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
