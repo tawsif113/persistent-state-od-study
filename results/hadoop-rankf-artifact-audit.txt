@@ -1,0 +1,172 @@
+Hadoop RankF artifact consistency audit
+=======================================
+
+PURPOSE
+
+Investigate the Hadoop KeyError observed while running the local RankF BSS
+artifact, without introducing placeholder ground truth or silently skipping
+missing modules.
+
+
+RANKF ARTIFACT
+
+Local artifact:
+RankF-DDED/RankF_O
+
+Relevant BSS ground truth:
+Preprocess/Ranking - ALL - MD/BSS/data.csv
+
+Relevant preprocessing implementation:
+Preprocess/Ranking - ALL - MD/BSS/getCombinations.py
+
+Random-order artifact:
+10Of1000Orders/randomOrders_1.csv
+through
+10Of1000Orders/randomOrders_10.csv
+
+
+ARTIFACT HASHES
+
+BSS data.csv:
+3fbed0d579656dac6664b5eecfe815a480258dead8960bdcc7f91d324ac29513
+
+BSS getCombinations.py:
+4ff985968ba1e2a0dd34f0ca47512a0c23bd80ae45916a864cf56ef7cc3f5935
+
+RankF_O README.md:
+8230819e833d5eb29847207561fe67954746780a0efd1a5e353738164e1ee2d5
+
+
+HADOOP REVISION
+
+Both BSS ground truth and random-order data refer to Hadoop revision:
+
+cc2babc1f75c93bf89a8f10da525f944c15d02ea
+
+
+BSS GROUND-TRUTH COVERAGE
+
+The BSS data contains one Hadoop module at this revision:
+
+hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app
+
+The corresponding BSS entry is:
+
+project=https://github.com/apache/hadoop.git
+sha=cc2babc1f75c93bf89a8f10da525f944c15d02ea
+module=hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app
+
+victim:
+org.apache.hadoop.mapreduce.v2.app.TestMRAppMaster.testMRAppMasterMidLock
+
+state-setter/polluter:
+org.apache.hadoop.mapreduce.jobhistory.TestJobHistoryEventHandler.testTimelineEventHandling
+
+cleaner:
+org.apache.hadoop.mapreduce.v2.app.TestRecovery.testOutputRecovery
+
+
+RANDOM-ORDER COVERAGE
+
+Every one of the ten random-order files contains the same five Hadoop modules
+at revision cc2babc1f75c93bf89a8f10da525f944c15d02ea:
+
+1. hadoop-common-project/hadoop-auth
+2. hadoop-hdfs-project/hadoop-hdfs-nfs
+3. hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app
+4. hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core
+5. hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs
+
+This was checked independently for randomOrders_1.csv through
+randomOrders_10.csv.
+
+
+MODULE-COVERAGE DIFFERENCE
+
+Present in both random-order data and BSS ground truth:
+
+hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-app
+
+Present in random-order data but absent from BSS ground truth:
+
+hadoop-common-project/hadoop-auth
+hadoop-hdfs-project/hadoop-hdfs-nfs
+hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core
+hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-hs
+
+
+KEYERROR MECHANISM
+
+The RankF BSS preprocessing logic constructs/iterates project-module entries
+from the random-order artifact and later directly indexes BSS ground truth
+using the corresponding project/module key.
+
+The implementation contains a direct lookup of the form:
+
+vpc_bss_data[git][module]
+
+Therefore, when preprocessing reaches an order-data Hadoop module such as:
+
+hadoop-common-project/hadoop-auth
+
+there is no corresponding module entry in the Hadoop BSS ground-truth
+dictionary, which produces the observed KeyError.
+
+
+CLASSIFICATION
+
+This is an intra-artifact module-coverage mismatch.
+
+It is NOT supported as:
+
+- a Hadoop revision mismatch: both sources use
+  cc2babc1f75c93bf89a8f10da525f944c15d02ea;
+
+- a module-name normalization mismatch: the one module represented in both
+  artifacts uses the same full module path, while the other four Hadoop
+  modules have no Hadoop BSS rows under alternative names;
+
+- evidence that missing Hadoop modules have no valid BSS ground truth in the
+  original study: this local artifact only establishes that such ground truth
+  is absent from the supplied BSS data.csv.
+
+
+ADDITIONAL ARTIFACT INCONSISTENCY
+
+RankF_O/README.md instructs:
+
+python3 getStat.py
+
+but no getStat.py file is present anywhere in this local RankF_O artifact.
+
+The available preprocessing programs are getCombinations.py files under the
+heuristic/type directories.
+
+The README's "Ranking - Methods/" directory name does match the supplied
+artifact and therefore is not considered a directory-name mismatch.
+
+
+RESEARCH HANDLING
+
+No placeholder Hadoop BSS records should be created.
+
+No missing modules should be silently skipped when reporting reproduced RankF
+results.
+
+Any analysis restricted to the one Hadoop module with supplied BSS ground
+truth must explicitly state that restriction.
+
+The KeyError should be reported as an artifact coverage inconsistency rather
+than treated as evidence about RankF's ranking quality.
+
+
+CONCLUSION
+
+At the same Hadoop revision, the random-order artifact covers five Hadoop
+modules while the supplied RankF BSS ground truth covers only one of them.
+RankF's preprocessing assumes ground truth exists for order-data modules and
+directly indexes the missing module keys, causing the Hadoop KeyError.
+
+Consequently, a complete Hadoop RankF evaluation cannot be reproduced from
+this local artifact without additional ground-truth data or an explicitly
+documented restriction of the evaluation scope.
