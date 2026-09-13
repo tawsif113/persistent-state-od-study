@@ -1,0 +1,81 @@
+Querydsl case #3 - iDFlakies persistent-state result
+
+raw_evidence_commit=5137964ce3dc4d2d543aabe796f2ad033fd0e788
+
+A=com.querydsl.hibernate.search.SearchQueryTest.exists
+B=com.querydsl.hibernate.search.SearchQueryTest.listResults
+
+detector=reverse
+fixed_original_order=A -> B
+reverse_order=B -> A
+
+CLEAN PROTOCOL
+
+original A -> B:
+A=PASS
+B=PASS
+
+reverse B -> A:
+B=PASS
+A=PASS
+
+reverse_order_lucene_pre_reset=true
+reverse_order_lucene_post_reset=false
+
+unfiltered_dt_candidates=0
+final_reported_dts=0
+final_idflakies_detected_od=false
+
+
+REUSED PROTOCOL
+
+original A -> B:
+A=PASS
+B=PASS
+
+reverse B -> A:
+B=ERROR
+A=PASS
+
+reverse_order_lucene_pre_reset=true
+reverse_order_lucene_post_reset=true
+
+unfiltered_dt_candidates=1
+unfiltered_candidate=com.querydsl.hibernate.search.SearchQueryTest.listResults
+candidate_intended_result=PASS
+candidate_revealed_result=ERROR
+
+verification_order=A -> B
+verification_A=PASS
+verification_B=ERROR
+
+verification_lucene_pre_reset=true
+verification_lucene_post_reset=true
+
+filtered_dt_candidates=0
+final_reported_dts=0
+final_idflakies_detected_od=false
+
+
+INTERPRETATION
+
+Under clean-state execution, the original and reverse orders both pass, so
+iDFlakies produces no order-dependent candidate.
+
+Under reused-state execution, the Lucene index created during the original
+order survives into the reverse-order JVM. listResults changes from its
+intended PASS result to ERROR, so iDFlakies creates an unfiltered
+order-dependent candidate.
+
+The persistent Lucene state also survives into iDFlakies' verification JVM.
+During verification, the original A -> B order no longer reproduces the
+expected PASS result for listResults; B is ERROR. The candidate therefore
+does not survive verification, and the final reported dependent-test list
+is empty.
+
+Thus persistent cross-execution state changes detector evidence and the
+verification path even though the final reported dependent-test count is
+zero under both protocols.
+
+This case demonstrates a verification-contamination mechanism. It does not
+establish how frequently this mechanism occurs across IDoFT.
